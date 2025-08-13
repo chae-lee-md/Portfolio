@@ -1,0 +1,55 @@
+/* Footer.css */
+
+/* Overall footer styles */
+#main-footer {
+  background-color: black;
+  color: white;
+  padding: 2rem 0; /* py-8 */
+}
+
+/* Inner container for layout */
+.footer-container {
+  max-width: 72rem; /* max-w-6xl */
+  margin: 0 auto; /* mx-auto */
+  padding: 0 1.5rem; /* px-6 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Back to top button */
+.back-to-top-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space-x-2 */
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease; /* transition-colors */
+  
+}
+
+.back-to-top-btn:hover {
+  color: #d1d5db; /* A light gray for hover */
+}
+
+ 
+
+
+/* Social links container */
+.social-links-container {
+  display: flex;
+  gap: 1.5rem; /* You can adjust this spacing as needed */
+}
+
+/* Individual social link */
+.social-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease; /* transition-colors */
+}
+
+.social-link:hover {
+  color: #d1d5db; /* A light gray for hover */
+}

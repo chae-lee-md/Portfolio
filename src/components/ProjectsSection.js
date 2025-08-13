@@ -1,83 +1,99 @@
-import React from 'react'; // <-- ADDED: React import
+// ProjectsSection.jsx
 
-// Project Card Component
-const ProjectCard = ({ title, description, tags, bgColor, image, size = 'normal' }) => {
+import React from 'react';
+import './ProjectsSection.css'; 
+import TEKPreview from '../assets/TEK-preview.png';
+import NHSPreview from '../assets/NHS-preview.png';
+
+// The corrected ProjectCard component
+// It now correctly destructures 'linkHref' from the props
+const ProjectCard = ({ title, description, tags, bgColor, image, imageUrl, size = 'normal', linkHref }) => {
+
   const cardClasses = size === 'large' 
-    ? 'col-span-2 row-span-2' 
+    ? 'card-large' 
     : size === 'wide' 
-    ? 'col-span-2' 
+    ? 'card-wide' 
     : '';
-    
+
   return (
-    <div className={`bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow ${cardClasses}`}>
-      <div className={`h-64 ${bgColor} relative overflow-hidden`}>
-        {image && (
-          <div className="absolute inset-0 flex items-center justify-center p-6">
-            <div className="w-full h-full bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white/60 text-sm">Project Preview</span>
-            </div>
-          </div>
-        )}
-      </div>
-      
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
+    // The entire card is wrapped in an anchor tag
+    <a href={linkHref} className="project-card-link"> 
+      <div className={`project-card ${cardClasses}`}>
+       
+       <div className={`project-card__image-container ${bgColor}`}>
+  {imageUrl && (
+    <div
+      className="project-card__image-preview"
+      style={{ backgroundImage: `url(${imageUrl})` }}
+    />
+  )}
+</div>
+
+
         
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
-            >
-              {tag}
-            </span>
-          ))}
+        <div className="project-card__content">
+          <h3 className="project-card__title">{title}</h3>
+          <p className="project-card__description">{description}</p>
+          
+          <div className="project-card__tags">
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                className="project-card__tag"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
-// Projects Section Component
+
+// The ProjectsSection component uses the ProjectCard
 const ProjectsSection = () => {
   const projects = [
     {
       title: 'NHS — Secured Apply Journey',
       description: 'Self-serve driven online apply journey with enhanced security and improved accessibility for fraud prevention',
       tags: ['Service Design', 'UX Design', 'Code prototyping'],
-      bgColor: 'bg-blue-600',
-      image: true
+      imageUrl: NHSPreview, // add image URL
+      linkHref: '/nhs-project' // Add a link for each project
     },
     {
       title: 'Career Roadmap',
       description: 'AI-powered career navigation platform tailored for young generation in tech',
       tags: ['Product Design', 'Code prototyping'],
       bgColor: 'bg-black',
-      image: true
+      image: true,
+      linkHref: '/career-roadmap-project'
     },
     {
-      title: 'Service Design with TEK',
-      description: 'Service that fosters alternative approaches for sustainable and equitable futures to be climate responsive',
-      tags: ['Service Design', 'UX Design', 'User Research'],
-      bgColor: 'bg-red-500',
-      image: true,
-      size: 'large'
+      title: 'Design Framework with TEK',
+      description: 'AI-powered career navigation platform tailored for young generation in tech',
+      tags: ['Product Design', 'Code prototyping'],
+      imageUrl: TEKPreview, // add image URL
+      linkHref: '/career-roadmap-project-2'
     },
     {
       title: 'Sustainable Pensions',
       description: 'Funding strategy that financially supports sustainable local food business to be consumed by all',
       tags: ['Service Design', 'UX Design'],
       bgColor: 'bg-blue-500',
-      image: true
+      image: true,
+      linkHref: '/sustainable-pensions-project'
     }
   ];
 
   return (
-    <div id="projects" className="px-6 py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+    <div id="projects-section">
+      <div className="projects-container">
+        <div className="projects-grid">
           {projects.map((project, index) => (
+            // The spread operator {...project} correctly passes `linkHref`
+            // along with all other properties to the ProjectCard.
             <ProjectCard key={index} {...project} />
           ))}
         </div>
@@ -86,4 +102,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection; // <-- ADDED: Export statement for the main component
+export default ProjectsSection;

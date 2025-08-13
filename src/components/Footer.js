@@ -1,31 +1,32 @@
 import React from 'react'; // <-- ADDED: React import
+import './Footer.css';
 
 // Footer Component
+
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="bg-black text-white py-8">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <button
-          onClick={scrollToTop}
-          className="flex items-center space-x-2 text-white hover:text-gray-300 transition-colors"
-        >
+    <footer id="main-footer">
+      <div className="footer-container">
+        <button onClick={scrollToTop} className="back-to-top-btn">
           <span>↑</span>
           <span>BACK TO TOP</span>
         </button>
-        
-        <a
-          href="#"
-          className="text-white hover:text-gray-300 transition-colors"
-        >
-          LinkedIn
-        </a>
+
+        <div className="social-links-container">
+          <a href="#" className="social-link">
+            LinkedIn
+          </a>
+          <a href="#" className="social-link">
+            chaehee.lee.d@gmail.com
+          </a>
+        </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; // <-- ADDED: The export statement
+export default Footer;

@@ -13,6 +13,7 @@ const Hero = ({ scrollToProjects }) => {
       <div className="hero-section">
         <div className="greeting-wrapper">
           <span className="greeting-text">Hello!</span>
+          
           <div className="hello-profile">
             <img 
               src={profilePic} 
@@ -31,8 +32,13 @@ const Hero = ({ scrollToProjects }) => {
       </div>
 
       <div className="cta-buttons">
-        <a href="#" className="cta-button">Little bit more about me ↗</a>
-        <a href="https://www.linkedin.com/in/chae" target="_blank" rel="noopener noreferrer" className="cta-button">LinkedIn ↗</a>
+        <a href="#" className="cta-button">Little bit more about me 
+          
+          
+          <span className="cta-btn-arrow">↗</span></a>
+        <a href="https://www.linkedin.com/in/chae-lee/" target="_blank" rel="noopener noreferrer" className="cta-button">
+        LinkedIn 
+        <span className="cta-btn-arrow">↗</span></a>
       </div>
 
     </div> 
@@ -44,12 +50,12 @@ const Hero = ({ scrollToProjects }) => {
             onClick={scrollToProjects}
             className="projects-cta-button"
           >
-            Selected projects
+            Work in Focus
             <div className="projects-cta-arrow">↓</div>
           </button>
         </div>
-      </div>
     </div>
+  </div>
   );
 };
 

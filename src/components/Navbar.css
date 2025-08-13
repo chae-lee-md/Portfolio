@@ -1,0 +1,128 @@
+
+/* Main navigation bar container */
+.navbar-container {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 72rem; /* The entire navbar is now contained to this width */
+  padding: 0 1.5rem;
+  border-radius: 100rem; /* Creates a pill-like, rounded shape for the container */
+  border: 1px solid rgb(229 231 235);  
+  z-index: 50;
+  /* background-color: rgba(255, 255, 255, 0.6);  
+  backdrop-filter: blur(8px);   */
+/* background-color: rgba(255, 255, 255, 0.8);  */
+  background-color: transparent; /* no bg here */
+}
+
+
+
+
+.navbar-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: -1; /* behind navbar content */
+}
+
+
+
+
+
+/* Inner wrapper for the navbar content, centers it and adds padding */
+.navbar-wrapper {
+  padding-top: 0.7rem; /* py-4 */
+  padding-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* This centers both the links and the button group */
+  gap: 2rem; /* Adds space between the navbar-links and the copy-email-button-wrapper */
+}
+
+/* Navigation links container */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* space-x-8 */
+}
+
+/* Base style for navigation links/buttons */
+.nav-link {
+  font-size: 1rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  transition-property: color; /* transition-colors */
+  transition-duration: 150ms;
+  color: #6b7280; /* text-gray-500 */
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-link:hover {
+  color: #000; /* hover:text-black */
+}
+
+.nav-link-active {
+  color: #000; /* text-black */
+}
+
+/* Button for "Copy email" */
+.copy-email-button-wrapper {
+  position: relative;
+}
+
+.copy-email-button {
+  background-color: #000; /* bg-black */
+  color: #fff; /* text-white */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem;
+  border-radius: 9999px; /* rounded-full */
+  font-size: 1rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  transition-property: all; /* transition-all */
+  transition-duration: 150ms;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space-x-2 */
+}
+
+.copy-email-button:hover {
+  background-color: #374151; /* hover:bg-gray-800 */
+}
+
+/* Tooltip for email status */
+.email-tooltip {
+  position: absolute;
+  top: 100%;
+  margin-top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  font-size: 0.75rem; /* text-xs */
+  padding-left: 0.5rem; /* px-2 */
+  padding-right: 0.5rem;
+  padding-top: 0.25rem; /* py-1 */
+  padding-bottom: 0.25rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+}
+
+.email-tooltip-arrow {
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #000;
+}

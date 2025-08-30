@@ -58,7 +58,7 @@ const ProjectsSection = () => {
     {
       title: 'NHS — Secured Apply Journey',
       description: 'Self-serve driven online apply journey with enhanced security and improved accessibility for fraud prevention',
-      tags: ['Service Design', 'UX Design', 'Code prototyping'],
+      tags: ['Service Design', 'UX Design', 'End-to-end'],
       imageUrl: NHSPreview, // add image URL
       linkHref: '/nhs-project' // Add a link for each project
     },
@@ -70,12 +70,29 @@ const ProjectsSection = () => {
       image: true,
       linkHref: '/career-roadmap-project'
     },
+
+    {
+      title: 'Design System Building',
+      description: 'This is placeholder text for the design system building project description',
+      tags: ['Product Design', 'Design Engineer project'],
+      bgColor: 'bg-black',
+      image: true,
+      linkHref: '/desigin-system-project'
+    },
     {
       title: 'Design Framework with TEK',
       description: 'AI-powered career navigation platform tailored for young generation in tech',
       tags: ['Product Design', 'Code prototyping'],
       imageUrl: TEKPreview, // add image URL
       linkHref: '/career-roadmap-project-2'
+    },
+    {
+      title: 'Integration of a Third-Party Solution',
+      description: 'Beyond the Product: Designing a Scalable Integration for Seamless Ecosystem Experiences',
+      tags: ['Product Design', 'Code prototyping'],
+      bgColor: 'bg-black',
+      image: true,
+      linkHref: '/career-roadmap-project'
     },
     {
       title: 'Sustainable Pensions',

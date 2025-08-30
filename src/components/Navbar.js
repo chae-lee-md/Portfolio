@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Check, Mail, Menu, X } from 'lucide-react';
 import './Navbar.css';
+import { Link, useLocation } from 'react-router-dom'; // Import Link and useLocation
 
-const Navbar = ({ currentPage, setCurrentPage }) => {
+const Navbar = () => { // Removed currentPage and setCurrentPage props
   const [emailCopied, setEmailCopied] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const location = useLocation(); // Get the current URL location
+
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText('chae@example.com');
+      await navigator.clipboard.writeText('chaehee.lee.d@gmail.com');
       setEmailCopied(true);
       setTimeout(() => setEmailCopied(false), 2000);
     } catch (err) {
@@ -25,11 +28,8 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
   };
-
-  const handleNavClick = (page) => {
-    setCurrentPage(page);
-    closeMobileMenu();
-  };
+  
+  // The handleNavClick function is no longer needed.
 
   // Close mobile menu on escape key
   useEffect(() => {
@@ -64,33 +64,36 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
             {/* Desktop Navigation */}
             <div className="navbar-desktop">
               <div className="navbar-links">
-                <button
-                  onClick={() => setCurrentPage('home')}
-                  className={`nav-link ${currentPage === 'home' ? 'nav-link-active' : ''}`}
+                {/* Use Link component for navigation */}
+                <Link
+                  to="/"
+                  className={`nav-link ${location.pathname === '/' ? 'nav-link-active' : ''}`}
                 >
                   WORK
-                </button>
-                <button
-                  onClick={() => setCurrentPage('about')}
-                  className={`nav-link ${currentPage === 'about' ? 'nav-link-active' : ''}`}
+                </Link>
+                <Link
+                  to="/about"
+                  className={`nav-link ${location.pathname === '/about' ? 'nav-link-active' : ''}`}
                 >
                   ABOUT
-                </button>
-                <button
+                </Link>
+                <Link
+                  to="/archive"
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
-                  className={`nav-link nav-archive ${currentPage === 'archive' ? 'nav-link-active' : ''}`}
+                  className={`nav-link nav-archive ${location.pathname === '/archive' ? 'nav-link-active' : ''}`}
                   style={{
                     width: '4rem',
                     textAlign: 'center',
-                    color: hovered ? '#025CEF' : '#6b7280',
+                    color: location.pathname === '/archive' ? '#000' : (hovered ? '#025CEF' : '#6b7280'),
                     transition: 'color 0.2s ease',
                     cursor: 'pointer',
                     fontWeight: hovered ? '700' : '500',
                   }}
                 >
                   {hovered ? 'WIP!' : 'ARCHIVE'}
-                </button>
+                </Link>
+                {/* Use a regular anchor tag for external links like Resume */}
                 <a href="#" className="nav-link">
                   RESUME
                 </a>
@@ -168,26 +171,30 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
           <X />
         </button>
 
-        <button
-          onClick={() => handleNavClick('home')}
-          className={`nav-link ${currentPage === 'home' ? 'nav-link-active' : ''}`}
+        {/* Use Link component for mobile menu navigation */}
+        <Link
+          to="/"
+          onClick={closeMobileMenu} // Add onClick to close the menu
+          className={`nav-link ${location.pathname === '/' ? 'nav-link-active' : ''}`}
         >
           WORK
-        </button>
+        </Link>
 
-        <button
-          onClick={() => handleNavClick('about')}
-          className={`nav-link ${currentPage === 'about' ? 'nav-link-active' : ''}`}
+        <Link
+          to="/about"
+          onClick={closeMobileMenu}
+          className={`nav-link ${location.pathname === '/about' ? 'nav-link-active' : ''}`}
         >
           ABOUT
-        </button>
-
-        <button
-          onClick={() => handleNavClick('archive')}
-          className={`nav-link ${currentPage === 'archive' ? 'nav-link-active' : ''}`}
+        </Link>
+        
+        <Link
+          to="/archive"
+          onClick={closeMobileMenu}
+          className={`nav-link ${location.pathname === '/archive' ? 'nav-link-active' : ''}`}
         >
           ARCHIVE
-        </button>
+        </Link>
 
         <a href="#" className="nav-link" onClick={closeMobileMenu}>
           RESUME

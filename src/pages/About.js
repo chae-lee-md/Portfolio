@@ -33,6 +33,27 @@ const AboutPage = () => {
             I'm always excited to discuss new opportunities and challenges. Whether you're 
             looking to collaborate on a project or just want to chat about design, feel free to reach out!
           </p>
+
+
+          <h2 className="text-2xl font-bold mt-12 mb-6">Let's Connect</h2>
+          <p className="text-gray-600 leading-relaxed">
+            I'm always excited to discuss new opportunities and challenges. Whether you're 
+            looking to collaborate on a project or just want to chat about design, feel free to reach out!
+          </p>
+
+
+          <h2 className="text-2xl font-bold mt-12 mb-6">Let's Connect</h2>
+          <p className="text-gray-600 leading-relaxed">
+            I'm always excited to discuss new opportunities and challenges. Whether you're 
+            looking to collaborate on a project or just want to chat about design, feel free to reach out!
+          </p>
+
+
+          <h2 className="text-2xl font-bold mt-12 mb-6">Let's Connect</h2>
+          <p className="text-gray-600 leading-relaxed">
+            I'm always excited to discuss new opportunities and challenges. Whether you're 
+            looking to collaborate on a project or just want to chat about design, feel free to reach out!
+          </p>
         </div>
       </div>
       <Footer />

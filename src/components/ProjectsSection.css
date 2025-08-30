@@ -40,7 +40,7 @@
 
 /* Image container */
 .project-card__image-container {
-  height: 24rem; /* h-64 */
+  height: 36rem; /* h-64 */
   position: relative;
   overflow: hidden;
   border-radius: 1rem; /* rounded-lg */
@@ -54,7 +54,7 @@
   background-color: black;
 }
 .bg-blue-500 {
-  background-color: #3b82f6;
+  background-color: #9FC955;
 }
 
 /* Image preview and placeholder */
@@ -67,9 +67,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem; /* p-6 */
+  /* padding: 1.5rem;   */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+  ;
   width: 100%;
   background-size: cover;
   background-position: center;

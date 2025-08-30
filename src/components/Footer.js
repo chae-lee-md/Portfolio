@@ -17,7 +17,7 @@ const Footer = () => {
         </button>
 
         <div className="social-links-container">
-          <a href="#" className="social-link">
+          <a href="https://www.linkedin.com/in/chae-lee/" className="social-link">
             LinkedIn
           </a>
           <a href="#" className="social-link">

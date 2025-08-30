@@ -6,7 +6,7 @@ body {
 /* Container for the entire hero section */
 .hero-container {
   padding-top: 10rem;
-  padding-bottom: 4rem;
+  padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   height: 100vh;
@@ -32,6 +32,7 @@ body {
 
 .hero-section {
   flex: 1.8;
+  margin-top: 4rem;
 }
 
 /* Hello and Name wrapper */
@@ -218,6 +219,8 @@ body {
   .cta-buttons {
     margin-top: 2rem;
     width: 100%;
+
+    
   }
 
   .cta-buttons a {
@@ -236,8 +239,15 @@ body {
   }
 
   .projects-cta-button {
-    position: relative;
+    /* position: relative; */
     margin: 0 auto;
+  bottom: 1rem;    /* This pushes it up from the bottom edge of the screen */
+   
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;  
   }
 }
 
@@ -269,10 +279,14 @@ body {
 
   .cta-buttons a {
     font-size: 1rem;
+    
   }
 
   .projects-cta-button {
     font-size: 0.9rem;
+
+
+    
   }
 }
 

@@ -1,164 +1,4 @@
-.navbar-container {
-  position: fixed;
-  top: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 72rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 100rem;
-  border: 1px solid rgb(229 231 235);
-  z-index: 50;
-  background: transparent; /* remove solid fill here */
-}
-
-
-.navbar-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: rgba(246, 243, 236, 0.8); /* #F6F3EC with 80% opacity */
-  /* background: rgba(246, 243, 236, 0.6); 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); */
-  z-index: -1; /* keep it behind content */
-}
-
-.navbar-blur {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 100rem;
-}
-
-
-
-/* Inner wrapper for the navbar content, centers it and adds padding */
-.navbar-wrapper {
-  padding-top: 0.7rem; /* py-4 */
-  padding-bottom: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* This centers both the links and the button group */
-  gap: 1rem; /* Adds space between the navbar-links and the copy-email-button-wrapper */
-}
-
-/* Navigation links container */
-.navbar-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem; /* space-x-8 */
-}
-
-/* Base style for navigation links/buttons */
-.nav-link {
-  font-size: 1rem; /* text-sm */
-  font-weight: 500; /* font-medium */
-  transition-property: color; /* transition-colors */
-  transition-duration: 150ms;
-  color: #6b7280; /* text-gray-500 */
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  text-align: center;
-  
-  
-}
-
-.nav-link:hover {
-  color: #000; /* hover:text-black */
-}
-
-.nav-link-active {
-  color: #000; /* text-black */
-}
-
-
-
-
-
-
-
-/* Button for "Copy email" */
-.copy-email-button-wrapper {
-  position: relative;
-}
-
-.copy-email-button {
-  background-color: #000; /* bg-black */
-  color: #fff; /* text-white */
-  padding-left: 1rem; /* px-4 */
-  padding-right: 1rem;
-  padding-top: 0.5rem; /* py-2 */
-  padding-bottom: 0.5rem;
-  border-radius: 9999px; /* rounded-full */
-  font-size: 1rem; /* text-sm */
-  font-weight: 500; /* font-medium */
-  transition-property: all; /* transition-all */
-  transition-duration: 200ms;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; /* space-x-2 */
-}
-
-.copy-email-button:hover {
-  background-color: #374151; /* hover:bg-gray-800 */
-}
-
-/* Tooltip for email status */
-.email-tooltip {
-  position: absolute;
-  top: 100%;
-  margin-top: 0.8rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #000;
-  color: #fff;
-  font-size: 0.75rem; /* text-xs */
-  font-weight: 600;
-  padding-left: 0.7rem; /* px-2 */
-  padding-right: 0.7rem;
-  padding-top: 0.3rem; /* py-1 */
-  padding-bottom: 0.3rem;
-  border-radius: 100rem;
-  white-space: nowrap; 
-}
-
-.email-tooltip-arrow {
-  position: absolute;
-  top: -0.25rem;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* MOBILE*/
-
+/* DESKTOP NAVBAR STYLES */
 .navbar-container {
   position: fixed;
   top: 3rem;
@@ -173,8 +13,9 @@
   border: 1px solid rgb(229 231 235);
   z-index: 50;
   background: transparent;
-  margin-top: 1rem;
 }
+
+
 
 .navbar-container::before {
   content: "";
@@ -202,14 +43,13 @@
   gap: 1rem;
 }
 
-/* Navigation links container */
 .navbar-links {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-/* Base style for navigation links/buttons */
+/* NAVIGATION LINKS */
 .nav-link {
   font-size: 1rem;
   font-weight: 500;
@@ -222,6 +62,7 @@
   cursor: pointer;
   padding: 0;
   text-align: center;
+  position: relative; /* Required for pseudo-element positioning */
 }
 
 .nav-link:hover {
@@ -229,10 +70,19 @@
 }
 
 .nav-link-active {
-  color: #000;
+  color: #000 !important;
+  position: relative;
 }
 
-/* Button for "Copy email" */
+/* Completely remove pseudo-elements from ALL nav links */
+.nav-link::after,
+.nav-link::before {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* CONTACT BUTTON */
 .copy-email-button-wrapper {
   position: relative;
 }
@@ -260,7 +110,7 @@
   background-color: #374151;
 }
 
-/* Tooltip for email status */
+/* EMAIL TOOLTIP */
 .email-tooltip {
   position: absolute;
   top: 100%;
@@ -290,7 +140,7 @@
   background-color: #000;
 }
 
-/* Hamburger menu button */
+/* MOBILE MENU STYLES */
 .hamburger-button {
   display: none;
   background: none;
@@ -301,12 +151,11 @@
 }
 
 .hamburger-button svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   color: #000;
 }
 
-/* Mobile menu overlay */
 .mobile-menu-overlay {
   display: none;
   position: fixed;
@@ -322,7 +171,6 @@
   display: block;
 }
 
-/* Mobile menu */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -356,7 +204,6 @@
   border-bottom: none;
 }
 
-/* Close button in mobile menu */
 .mobile-close-button {
   align-self: flex-end;
   background: none;
@@ -372,7 +219,7 @@
   color: #000;
 }
 
-/* Desktop/Mobile layout wrapper */
+/* LAYOUT WRAPPERS */
 .navbar-content {
   display: flex;
   align-items: center;
@@ -389,10 +236,10 @@
 .navbar-mobile-controls {
   display: none;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-/* MOBILE STYLES */
+/* RESPONSIVE STYLES */
 @media (max-width: 768px) {
   .navbar-container {
     top: 1rem;
@@ -401,6 +248,7 @@
     transform: none;
     max-width: none;
     width: auto;
+    margin-top: 1rem;
   }
 
   .navbar-blur {
@@ -416,7 +264,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
   }
 
   .hamburger-button {
@@ -435,7 +282,6 @@
     display: none;
   } 
 
-  /* Show only icon on mobile for contact button */
   .copy-email-button svg {
     margin-right: 0;
   }
@@ -450,10 +296,20 @@
 @media (max-width: 480px) {
   .navbar-container {
     top: 0.5rem;
-    left: 0.5rem;
+    /* left: 0.5rem; */
     right: 0.5rem;
-    width: calc(100% - 1rem);
+    /* width: calc(100% - 1rem); */
+
+    left: auto;
+    transform: none;
+    max-width: none;
+    width: auto;
+    margin-top: 1rem;
   }
+
+   
+   
+
 
   .mobile-menu {
     width: 90%;

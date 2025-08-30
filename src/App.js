@@ -1,26 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
-
+import NHSProject from './pages/nhs-project';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  const renderPage = () => {
-    if (currentPage === 'home') {
-      return <Home />;
-    }
-    if (currentPage === 'about') {
-      return <About />;
-    }
-  };
-
   return (
-    <div className="App">
-      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      {renderPage()}
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/nhs-project" element={<NHSProject />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

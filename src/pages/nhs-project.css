@@ -928,25 +928,258 @@ li:last-child {
   font-size: 1.1rem;
   line-height: 1.7;
   color: black;
-  max-width: 800px;
+  max-width: 34rem;
   letter-spacing: -0.03rem;
 }
 
-.solutions-images {
+/* .solutions-images {
   align-items: center;
   margin-bottom: 4rem;
   margin-top: 4rem;
+} */
+
+
+
+
+.nhs-container {
+  min-height: 100vh;
 }
+
+.nhs-max-width {
+  max-width: 80rem;
+  margin: 0 auto;
+  margin-top: 8rem;
+}
+
+.nhs-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .nhs-section {
+    grid-template-columns: 1fr 1fr;
+      margin-top: 8rem;
+  margin-bottom: 16rem;
+  }
+
+}
+
+.nhs-content {
+  /* Content styling handled by child elements */
+}
+
+.nhs-number-badge {
+  background-color: #005EB8;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.solutions-section h2.nhs-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  max-width: 34rem;
+}
+
+.nhs-text {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.nhs-text-margin {
+  margin-bottom: 1.5rem;
+}
+
+.nhs-image-container {
+  display: block; /* make it a block so it occupies vertical space */
+  text-align: center; /* center the images inside */
+}
+
+.nhs-phone-large {
+  height: 40rem; 
+   
+}
+
+.nhs-phone-medium {
+  width: 12rem;
+  height: 24rem;
+  background-color: #9ca3af;
+  border-radius: 0.5rem;
+  
+}
+
+.nhs-dual-phones {
+  text-align: center; /* center the container */
+}
+
+
+.nhs-image-container img {
+  display: inline-block;
+  vertical-align: top; /* keeps them aligned next to each other */
+  height: 40rem;
+}
+
+.layered-phones-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px; /* Add some padding to accommodate rotation */
+}
+
+.layered-phones-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.phone-hover-effect {
+  width: 300px; /* Adjust as needed */
+  height: auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.phone-hover-effect:first-child {
+  /* BuildingUserTrust1 - Front phone initially */
+  position: relative;
+  z-index: 2;
+}
+
+.phone-hover-effect:last-child {
+  /* BuildingUserTrust2 - Back phone initially */
+  position: absolute;
+  top: 0;
+  left: -130px; /* Offset to make it "poke out" */
+  z-index: 1;
+  transform: rotate(-20deg);
+}
+
+/* Hover effects */
+.phone-hover-effect:first-child:hover {
+  /* When hovering BuildingUserTrust1, keep it in front */
+  z-index: 3;
+  transform: scale(1.05);
+}
+
+.phone-hover-effect:last-child:hover {
+  /* When hovering BuildingUserTrust2, bring it to front and straighten */
+  z-index: 3;
+  transform: rotate(0deg) scale(1.05);
+}
+
+
+
+
+
+.nhs-accessibility-section {
+  margin-bottom: 5rem;
+}
+
+.nhs-accessibility-content {
+  margin-bottom: 3rem;
+}
+
+.nhs-accessibility-text {
+  max-width: 34rem;
+}
+
+.nhs-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar for WebKit browsers */
+.nhs-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nhs-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nhs-scroll-content {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  width: max-content;
+}
+
+.nhs-phone-scroll {
+  flex-shrink: 0;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nhs-container {
+    padding: 1rem;
+  }
+  
+  .nhs-section {
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .nhs-title {
+    font-size: 1.5rem;
+  }
+  
+  .nhs-dual-phones {
+    gap: 1rem;
+  }
+  
+  .nhs-phone-medium {
+    width: 10rem;
+    height: 20rem;
+  }
+  
+  .nhs-phone-large {
+    width: 14rem;
+    height: 28rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 /* Impact section */
-
-
-
-
 
 
 .impact-section {

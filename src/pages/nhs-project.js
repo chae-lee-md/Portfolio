@@ -11,7 +11,10 @@ import UserJourney2 from "../assets/current-user-journey2.png";
 import EcosystemMap from "../assets/ecosystem-stakeholder-map.png";
 import DesignIteration from "../assets/design-iteration.png";
 import SystemsThinking from "../assets/systems-thinking.png";
-
+import UserNavigation from "../assets/nhs-outcome-user-nagivation.png";
+import BuildingUserTrust1 from "../assets/nhs-outcome-building-user-trust1.png";
+import BuildingUserTrust2 from "../assets/nhs-outcome-building-user-trust2.png";    
+import AccessibilityConsideration from "../assets/nhs-outcome-accessibility-consideration.png";    
 
 
 
@@ -146,14 +149,14 @@ const NHSProject = () => {
 
 
         {/* Design Process Section */}
-    <section class="section">
-        <div class="container">
-            <h2>Design Process</h2>
-            
-        </div>
-    </section>
+        {/* <section class="section">
+            <div class="container">
+                <h2>Design Process</h2>
+                
+            </div>
+        </section>
 
-
+         */}
 
 
 
@@ -503,6 +506,113 @@ const NHSProject = () => {
             <p>This is one of the various measures we have implemented to prevent fraudulent applications, and to enhance security for both the business and users.
             </p>
         
+            
+
+
+
+<div className="nhs-container">
+      {/* Section 1: New User Navigation */}
+      <div className="nhs-max-width">
+        <div className="nhs-section">
+          <div className="nhs-content">
+            <div className="nhs-number-badge">
+              1
+            </div>
+            <h2 className="nhs-title">
+              New user navigation to guide users
+            </h2>
+            <p className="nhs-text nhs-text-margin">
+              The MVP enables users to create a single application, 
+              while reducing the potential for fraud. Enhanced user navigation 
+              ensures users are directed to the right destination to achieve their goal.
+            </p>
+            <p className="nhs-text">
+              This is one of the various measures we have implemented to 
+              prevent fraudulent applications, and to enhance security 
+              for both the business and users.
+            </p>
+          </div>
+          <div className="nhs-image-container">
+        <img 
+            src={UserNavigation} 
+            alt="User Navigation" 
+            className="nhs-phone-large" 
+        />
+        </div>
+        </div>
+
+        {/* Section 2: Security and Trust */}
+        <div className="nhs-section">
+         
+         <div className="layered-phones-wrapper">
+  <div className="layered-phones-container">
+    <img 
+      src={BuildingUserTrust1} 
+      alt="User Navigation" 
+      className="phone-hover-effect" 
+    />
+    <img 
+      src={BuildingUserTrust2} 
+      alt="Building User Trust" 
+      className="phone-hover-effect" 
+    /> 
+  </div>
+</div>
+
+          <div className="nhs-content">
+            <div className="nhs-number-badge">
+              2
+            </div>
+            <h2 className="nhs-title">
+              Building user trust through strong security practices and responsible data safeguarding
+            </h2>
+            <p className="nhs-text nhs-text-margin">
+              As part of our enhanced customer verification measures, the service now collects users' National Insurance numbers to prevent a single user from making multiple applications. This ensures that applicants are accurately identified and trusted.
+            </p>
+            <p className="nhs-text">
+              A One Time Passcode (OTP) feature is aimed at providing optimal protection and ensuring the safety of user data.
+            </p>
+          </div>
+          
+        </div>
+
+        {/* Section 3: Accessibility */}
+        <div className="nhs-accessibility-section">
+          <div className="nhs-accessibility-content">
+            <div className="nhs-number-badge">
+              2
+            </div>
+            <h2 className="nhs-title">
+              Accessibility consideration
+            </h2>
+            <div className="nhs-accessibility-text">
+              <p className="nhs-text nhs-text-margin">
+                Given the public service context, it’s vital to cater to the diverse needs of multiple user groups, especially vulnerable individuals considering the nature of the service. 
+              </p>
+              <p className="nhs-text">
+                To do so, content design played an important role in ensuring clarity, simplicity, and personalisation, making the information easily understandable and actionable for all users.
+              </p>
+            </div>
+          </div>
+          
+          {/* Horizontal Scrollable Phones */}
+          <div className="nhs-scroll-container">
+            <div className="nhs-scroll-content">
+              <div className="nhs-image-container">
+        <img 
+            src={AccessibilityConsideration} 
+            alt="Accessibility Consideration" 
+            className="nhs-phone-large" 
+        />
+        
+        </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
         </div>
     </section>
 
@@ -525,21 +635,25 @@ const NHSProject = () => {
 
       <div className="impact-cards">
         <div className="impact-card">
-          <h2>200K+</h2>
+          <h2>!!!200K+</h2>
           <h5>Active Users</h5>
           <p>Engaged with our platform within the first 6 months.</p>
         </div>
         <div className="impact-card">
-          <h2>95%</h2>
-          <h5>Diagnostic Speed Improvement</h5>
-          <p>Achievement of 95% uptime of online claim update journey.</p>
+          <h2>91%</h2>
+          <h5>Customer Satisfaction Score</h5>
+          <p>Surpassing our 80% target, with over half of respondents rating us 7–10 since launch.</p>
+
+          
         </div>
         <div className="impact-card">
-          <h2>98%</h2>
-          <h5>Diagnostic Accuracy</h5>
-          <p>Reduction in the number of National Insurance Number bounced claims by 10%</p>
+          <h2>28%↓</h2>
+          <h5>Reduction in Contact Driver Volume</h5>
+          <p>Despite a July 2024 spike (3,291 emails), overall email contacts dropped 28.44% since launch, with call volumes also down 22.82%.
+</p>
         </div>
       </div>
+
 
 
 

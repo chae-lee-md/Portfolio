@@ -564,7 +564,7 @@ const NHSProject = () => {
               2
             </div>
             <h2 className="nhs-title">
-              Building user trust through strong security practices and responsible data safeguarding
+              Building user trust through strong security practices 
             </h2>
             <p className="nhs-text nhs-text-margin">
               As part of our enhanced customer verification measures, the service now collects users' National Insurance numbers to prevent a single user from making multiple applications. This ensures that applicants are accurately identified and trusted.
@@ -580,7 +580,7 @@ const NHSProject = () => {
         <div className="nhs-accessibility-section">
           <div className="nhs-accessibility-content">
             <div className="nhs-number-badge">
-              2
+              3
             </div>
             <h2 className="nhs-title">
               Accessibility consideration
@@ -602,7 +602,7 @@ const NHSProject = () => {
         <img 
             src={AccessibilityConsideration} 
             alt="Accessibility Consideration" 
-            className="nhs-phone-large" 
+            className="nhs-phone-list" 
         />
         
         </div>
@@ -653,15 +653,49 @@ const NHSProject = () => {
 </p>
         </div>
       </div>
-
-
-
-
-
- 
     </section>
 
 
+
+
+    {/* What I learned */}
+    <section class="my-learning-section">
+        <div class="container">
+            <h2>What I learned...</h2>
+            
+            <div className="my-learning-cards">
+                <div className="my-learning-card1">
+                    <h4>Stakeholder management</h4>
+                    <p>
+                    I can't agree to everything key stakeholders request solely based on business needs. As an experience designer, my role is to advocate for users. It's crucial to help stakeholders understand why certain ideas are beneficial for both the business and the users, and how they will yield returns for the business. Viewing the big picture and considering scalability are essential for designing comprehensive, end-to-end services.
+                    </p>
+                    {/* <span className="tag">Stakeholder</span> */}
+                </div>
+
+                <div className="my-learning-card2">
+                    <h4>Building a better product</h4>
+                    <p>
+                    Our goal should be to build a better product rather than a perfect one with MVP. With this mindset, I was able to prioritise and scope what mattered the most to achieve the goal.
+                    </p>
+                    {/* <span className="tag">Stakeholder</span> */}
+                </div>
+
+                <div className="my-learning-card3">
+                    <h4>Real accessibility above web accessibility </h4>
+                    <p>
+                    Meeting WCAG accessibility requirements was imperative for our service. It was vital to cater to the diverse needs of multiple user groups, especially vulnerable individuals. This approach stems from directly engaging with users in research and learning from them with deep customer empathy. In this process, it's not just about testing our service with users, but also about regularly interacting with them to truly understand their needs and experiences. 
+                    </p>
+                    {/* <span className="tag">Beneficiary</span> */}
+                </div>
+                </div> 
+    </div>
+    </section>
+
+
+
+
+
+    {/* More project */}
 
 
 

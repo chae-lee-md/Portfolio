@@ -958,15 +958,6 @@ li:last-child {
   margin-bottom: 5rem;
 }
 
-@media (min-width: 1024px) {
-  .nhs-section {
-    grid-template-columns: 1fr 1fr;
-      margin-top: 8rem;
-  margin-bottom: 16rem;
-  }
-
-}
-
 .nhs-content {
   /* Content styling handled by child elements */
 }
@@ -987,7 +978,7 @@ li:last-child {
 .solutions-section h2.nhs-title {
   font-size: 1.875rem;
   font-weight: 600;
-  color: #111827;
+  color: #005EB8;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   max-width: 34rem;
@@ -1008,8 +999,21 @@ li:last-child {
 }
 
 .nhs-phone-large {
-  height: 40rem; 
-   
+  height: 40rem;    
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+.nhs-phone-large:hover {
+  /* When hovering BuildingUserTrust1, keep it in front */
+  z-index: 3;
+  transform: scale(1.05);
+}
+
+
+.nhs-phone-list {
+  height: 40rem;     
 }
 
 .nhs-phone-medium {
@@ -1129,6 +1133,18 @@ li:last-child {
 
 
 /* Responsive adjustments */
+
+@media (min-width: 1024px) {
+  .nhs-section {
+    grid-template-columns: 1fr 1fr;
+      margin-top: 8rem;
+  margin-bottom: 16rem;
+  }
+
+}
+
+
+
 @media (max-width: 768px) {
   .nhs-container {
     padding: 1rem;
@@ -1276,6 +1292,90 @@ text-align: center;
  
 
 
+
+
+
+/* what I learned section */
+.my-learning-section {
+  background: white;
+  padding: 80px 0;
+}
+
+.my-learning-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+}
+
+.my-learning-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+}
+
+.maps-images {
+  align-items: center;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+
+
+
+.my-learning-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 8cap;
+}
+
+.my-learning-card1 {
+  background: #E2EE8C;
+  padding: 1.8rem; 
+  flex: 1;
+  color: black;
+}
+
+.my-learning-card2 {
+  background: #FE9D8D;
+  padding: 1.8rem; 
+  flex: 1;
+   color: black;
+     transform: rotate(1deg);
+}
+.my-learning-card3 {
+  background: #B692FC;
+  /* border-radius: 12px; */
+  padding: 1.8rem; 
+  flex: 1;
+   color: black;
+}
+
+.my-learning-card1 h4,
+.my-learning-card2 h4,
+.my-learning-card3 h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+
+.my-learning-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.tag {
+  font-size: 0.9rem;
+  color: #999;
+}
 
 
 

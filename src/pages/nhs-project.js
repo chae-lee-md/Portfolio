@@ -15,8 +15,8 @@ import UserNavigation from "../assets/nhs-outcome-user-nagivation.png";
 import BuildingUserTrust1 from "../assets/nhs-outcome-building-user-trust1.png";
 import BuildingUserTrust2 from "../assets/nhs-outcome-building-user-trust2.png";    
 import AccessibilityConsideration from "../assets/nhs-outcome-accessibility-consideration.png";    
-
-
+import MoreProject1 from "../assets/NHS-login-preview.png";
+import { Link } from "react-router-dom";
 
 
 const NHSProject = () => {
@@ -95,12 +95,12 @@ const NHSProject = () => {
                 </ul>
               </div>
 
-             <div className="outcome-button">
-  <div className="arrow-circle">
-    <ArrowRight size={20} />
-  </div>
-  <span>GO TO OUTCOME</span>
-</div>
+             <a href="#solutions-section" className="outcome-button">
+            <div className="arrow-circle">
+              <ArrowRight size={20} />
+            </div>
+            <span>GO TO OUTCOME</span>
+          </a>
             </div>
           </div>
         </div>
@@ -498,7 +498,7 @@ const NHSProject = () => {
 
 
     {/* Solutions Section */}
-    <section class="solutions-section">
+    <section id="solutions-section" class="solutions-section">
         <div class="container">
             <h2>Solutions</h2>
             <p>The MVP enables users to create a single application, while reducing the potential for fraud. Enhanced user navigation ensures users are directed to the right destination to achieve their goal.
@@ -696,6 +696,37 @@ const NHSProject = () => {
 
 
     {/* More project */}
+    <section className="more-project-section">
+  <div className="container">
+    <h2 className="more-project-subtitle">More Project</h2>
+
+    <div className="project-grid">
+      {/* Image 1 */}
+      <div className="project-card">
+         <Link to="/nhs-login-project">
+        <img src={MoreProject1} alt="Project 1" className="project-image" />
+        <div className="project-overlay">
+          <span className="project-text">Integration of a Third-Party Solution</span>
+          <span className="project-arrow">→</span>
+        </div>
+        </Link>
+      </div>
+
+      {/* Image 2 */}
+      <div className="project-card">
+        <Link to="/purpose">
+        <img src={NHSLogo} alt="Project 2" className="project-image" />
+        <div className="project-overlay">
+          <span className="project-text">Another Project</span>
+          <span className="project-arrow">→</span>
+        </div>
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 

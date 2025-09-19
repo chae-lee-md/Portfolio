@@ -3,6 +3,7 @@ body {
 }
 
 
+
 .nhs-case-study {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   background-color: #F6F3EC; /* This is the current background color */
@@ -1087,7 +1088,6 @@ li:last-child {
 
 
 
-
 .nhs-accessibility-section {
   margin-bottom: 5rem;
 }
@@ -1129,65 +1129,6 @@ li:last-child {
 .nhs-phone-scroll {
   flex-shrink: 0;
 }
-
-
-
-/* Responsive adjustments */
-
-@media (min-width: 1024px) {
-  .nhs-section {
-    grid-template-columns: 1fr 1fr;
-      margin-top: 8rem;
-  margin-bottom: 16rem;
-  }
-
-}
-
-
-
-@media (max-width: 768px) {
-  .nhs-container {
-    padding: 1rem;
-  }
-  
-  .nhs-section {
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  
-  .nhs-title {
-    font-size: 1.5rem;
-  }
-  
-  .nhs-dual-phones {
-    gap: 1rem;
-  }
-  
-  .nhs-phone-medium {
-    width: 10rem;
-    height: 20rem;
-  }
-  
-  .nhs-phone-large {
-    width: 14rem;
-    height: 28rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1325,7 +1266,6 @@ text-align: center;
 
 
 
-
 .my-learning-cards {
   display: flex;
   flex-wrap: wrap;
@@ -1339,13 +1279,15 @@ text-align: center;
   padding: 1.8rem; 
   flex: 1;
   color: black;
+  transition: transform 0.3s ease;
 }
 
 .my-learning-card2 {
   background: #FE9D8D;
   padding: 1.8rem; 
   flex: 1;
-   color: black;
+  color: black;
+    transition: transform 0.3s ease;
      transform: rotate(1deg);
 }
 .my-learning-card3 {
@@ -1354,7 +1296,9 @@ text-align: center;
   padding: 1.8rem; 
   flex: 1;
    color: black;
+       transition: transform 0.3s ease;
 }
+
 
 .my-learning-card1 h4,
 .my-learning-card2 h4,
@@ -1362,6 +1306,13 @@ text-align: center;
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
+}
+
+
+.my-learning-card1:hover,
+.my-learning-card2:hover,
+.my-learning-card3:hover {
+  transform: scale(1.01);
 }
 
 
@@ -1380,8 +1331,124 @@ text-align: center;
 
 
 
+
+/* BOTTOM more projec section */
+.more-project-section {
+  background: black; /* light grey like screenshot */
+  text-align: center;
+  padding: 80px 0;
+  text-align: center;
+}
+
+
+.more-project-subtitle {
+  font-size: 2.5rem;
+  color: #fff;  
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: -0.03rem;
+  text-align: center; 
+}
+ 
+.project-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.project-arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-arrow {
+  transform: translateX(5px);
+}
+
+
+
 /* Responsive Design */
+
+@media (min-width: 1024px) {
+  .nhs-section {
+    grid-template-columns: 1fr 1fr;
+      margin-top: 8rem;
+  margin-bottom: 16rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .nhs-container {
+    padding: 1rem;
+  }
+  
+  .nhs-section {
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .nhs-title {
+    font-size: 1.5rem;
+  }
+  
+  .nhs-dual-phones {
+    gap: 1rem;
+  }
+  
+  .nhs-phone-medium {
+    width: 10rem;
+    height: 20rem;
+  }
+  
+  .nhs-phone-large {
+    width: 14rem;
+    height: 28rem;
+  } 
+
   .nhs-hero-section h1 {
     font-size: 2rem;
   }
@@ -1464,7 +1531,7 @@ font-size: 2rem;
   }
 
 
-    .user-group-section h2 {
+  .user-group-section h2 {
 font-size: 2rem;
     }
 
@@ -1508,12 +1575,9 @@ font-size: 2rem;
   .summary-card {
     max-width: 100%;
   }
-
-
-
-
-        
 }
+
+
 
 @media (max-width: 480px) {
   .nhs-hero-section {

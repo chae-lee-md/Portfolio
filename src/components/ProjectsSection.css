@@ -53,8 +53,12 @@
 .bg-black {
   background-color: black;
 }
-.bg-blue-500 {
-  background-color: #9FC955;
+.bg-white {
+  background-color: white;
+}
+
+.bg-blue {
+  background-color: #002D8A;
 }
 
 /* Image preview and placeholder */
@@ -69,14 +73,16 @@
   justify-content: center;
   /* padding: 1.5rem;   */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  ;
   width: 100%;
-  background-size: cover;
+  margin: 0 auto; /* Centers the element horizontally */
+    background-size: contain; /* Shows full image, may leave empty space */
   background-position: center;
   background-repeat: no-repeat;
 }
 
-
+.bg-white .project-card__image-preview {
+  background-size: 40%; /* Only affects cards with bg-white class */
+}
 
 
 

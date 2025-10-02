@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Check, Copy } from 'lucide-react';
 
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 import ProjectsSection from '../components/ProjectsSection';
@@ -24,7 +24,7 @@ const Home = () => {
       <div ref={projectsRef}>
         <ProjectsSection />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

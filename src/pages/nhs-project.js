@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useEffect } from "react";
 import { ArrowRight } from 'lucide-react';
 import './nhs-project.css';
 import NHSHeroImage from '../assets/nhs-hs-hero-img.png';
@@ -13,13 +14,24 @@ import DesignIteration from "../assets/design-iteration.png";
 import SystemsThinking from "../assets/systems-thinking.png";
 import UserNavigation from "../assets/nhs-outcome-user-nagivation.png";
 import BuildingUserTrust1 from "../assets/nhs-outcome-building-user-trust1.png";
-import BuildingUserTrust2 from "../assets/nhs-outcome-building-user-trust2.png";    
-import AccessibilityConsideration from "../assets/nhs-outcome-accessibility-consideration.png";    
+import BuildingUserTrust2 from "../assets/nhs-outcome-building-user-trust2.png";   
+import AccessibilityConsideration from "../assets/nhs-outcome-accessibility-consideration.png";  
+import AccessibilityConsideration1 from "../assets/nhs-outcome-accessibility-consideration1.png";   
+import AccessibilityConsideration2 from "../assets/nhs-outcome-accessibility-consideration2.png";  
+import AccessibilityConsideration3 from "../assets/nhs-outcome-accessibility-consideration3.png";  
+import AccessibilityConsideration4 from "../assets/nhs-outcome-accessibility-consideration4.png";  
+import AccessibilityConsideration5 from "../assets/nhs-outcome-accessibility-consideration5.png";   
 import MoreProject1 from "../assets/NHS-login-preview.png";
+import MoreProject2 from "../assets/purpose-preview.png";
 import { Link } from "react-router-dom";
 
 
 const NHSProject = () => {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="nhs-case-study">
       {/* Hero Section */}
@@ -32,6 +44,8 @@ const NHSProject = () => {
           src={NHSHeroImage}
           alt="NHS Healthy Start Hero Image"
           className="nhs-hs-hero-img"
+          onContextMenu={(e) => e.preventDefault()}
+          onDragStart={(e) => e.preventDefault()}
         />
         </div>
     </section>
@@ -400,8 +414,10 @@ const NHSProject = () => {
 
             
             <div className="journey-images">
-         <img src={UserJourney1} alt="Current User Journey 1" className="user-journey" />
-        <img src={UserJourney2} alt="Current User Journey 2" className="user-journey" />
+         <img src={UserJourney1} alt="Current User Journey 1" className="user-journey" 
+         onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()}/>
+        <img src={UserJourney2} alt="Current User Journey 2" className="user-journey" 
+        onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()}/>
       </div>
 
       <div className="journey-questions">
@@ -451,7 +467,8 @@ const NHSProject = () => {
             Placeholder text for the ecosystem map & stakeholder map description.
             </p>
         <div className="maps-images">
-        <img src={EcosystemMap} alt="Ecosystem Map" className="ecosystem-stakeholder-map" />
+        <img src={EcosystemMap} alt="Ecosystem Map" className="ecosystem-stakeholder-map" 
+        onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()}/>
         </div>
     </div>
     </section>
@@ -470,7 +487,8 @@ const NHSProject = () => {
             We had total 6 sessions for each round to test the end-to-end scenarios along with semi-structured interview.
             </p>
         <div className="design-iteration-images">
-        <img src={DesignIteration} alt="Design Iteration" className="design-iteration" />
+        <img src={DesignIteration} alt="Design Iteration" className="design-iteration" onContextMenu={(e) => e.preventDefault()}
+  onDragStart={(e) => e.preventDefault()}/>
         </div>
     </div>
     </section>
@@ -489,7 +507,8 @@ const NHSProject = () => {
                 This was developed in collaboration with the lead engineer to enhance understanding, and was ultimately used to communicate effectively with the wider team and stakeholders.
             </p>
         <div className="systems-thinking-images">
-        <img src={SystemsThinking} alt="Systems Thinking" className="systems-thinking" />
+        <img src={SystemsThinking} alt="Systems Thinking" className="systems-thinking" onContextMenu={(e) => e.preventDefault()}
+  onDragStart={(e) => e.preventDefault()}/>
         </div>
     </div>
     </section>
@@ -537,6 +556,8 @@ const NHSProject = () => {
             src={UserNavigation} 
             alt="User Navigation" 
             className="nhs-phone-large" 
+            onContextMenu={(e) => e.preventDefault()}
+            onDragStart={(e) => e.preventDefault()}
         />
         </div>
         </div>
@@ -550,16 +571,20 @@ const NHSProject = () => {
       src={BuildingUserTrust1} 
       alt="User Navigation" 
       className="phone-hover-effect" 
+      onContextMenu={(e) => e.preventDefault()}
+      onDragStart={(e) => e.preventDefault()}
     />
     <img 
       src={BuildingUserTrust2} 
       alt="Building User Trust" 
       className="phone-hover-effect" 
+      onContextMenu={(e) => e.preventDefault()}
+      onDragStart={(e) => e.preventDefault()}
     /> 
   </div>
 </div>
 
-          <div className="nhs-content">
+          <div className="nhs-content2">
             <div className="nhs-number-badge">
               2
             </div>
@@ -598,13 +623,44 @@ const NHSProject = () => {
           {/* Horizontal Scrollable Phones */}
           <div className="nhs-scroll-container">
             <div className="nhs-scroll-content">
-              <div className="nhs-image-container">
-        <img 
-            src={AccessibilityConsideration} 
-            alt="Accessibility Consideration" 
-            className="nhs-phone-list" 
-        />
-        
+              <div className="nhs-image-container-accessibility">
+                <img 
+              src={AccessibilityConsideration} 
+              alt="Accessibility Consideration" 
+              className="nhs-phone-list" 
+              onContextMenu={(e) => e.preventDefault()}
+              onDragStart={(e) => e.preventDefault()}
+          />
+          {/* <img 
+              src={AccessibilityConsideration1} 
+              alt="Accessibility Consideration image 1" 
+              className="nhs-phone-list" 
+          />
+
+                    <img 
+              src={AccessibilityConsideration2} 
+              alt="Accessibility Consideration image 2" 
+              className="nhs-phone-list" 
+          />
+
+                    <img 
+              src={AccessibilityConsideration3} 
+              alt="Accessibility Consideration image 4" 
+              className="nhs-phone-list" 
+          />
+
+                    <img 
+              src={AccessibilityConsideration4} 
+              alt="Accessibility Consideration image 4" 
+              className="nhs-phone-list" 
+          />
+
+                    <img 
+              src={AccessibilityConsideration5} 
+              alt="Accessibility Consideration image 5" 
+              className="nhs-phone-list" 
+          />
+         */}
         </div>
             </div>
           </div>
@@ -623,6 +679,7 @@ const NHSProject = () => {
 
     {/* Impact Section */}
     <section className="impact-section">
+      <div class="container">
       <div className="impact-intro">
         <h2 className="impact-subtitle">Impact</h2>
             <p>The product vision is to make it simple, safe, and accessible for eligible individuals to apply for and manage their user experience online.
@@ -635,16 +692,16 @@ const NHSProject = () => {
 
       <div className="impact-cards">
         <div className="impact-card">
-          <h2>!!!200K+</h2>
+          <h2>130K+</h2>
           <h5>Active Users</h5>
-          <p>Engaged with our platform within the first 6 months.</p>
+          <p>Within the first 12 months, over 130K users actively engaged with our platform. During this period, we gained 138K new users, resulting in an increase of 135K active users.</p>
         </div>
+
         <div className="impact-card">
           <h2>91%</h2>
           <h5>Customer Satisfaction Score</h5>
           <p>Surpassing our 80% target, with over half of respondents rating us 7–10 since launch.</p>
 
-          
         </div>
         <div className="impact-card">
           <h2>28%↓</h2>
@@ -652,6 +709,7 @@ const NHSProject = () => {
           <p>Despite a July 2024 spike (3,291 emails), overall email contacts dropped 28.44% since launch, with call volumes also down 22.82%.
 </p>
         </div>
+      </div>
       </div>
     </section>
 
@@ -702,9 +760,9 @@ const NHSProject = () => {
 
     <div className="project-grid">
       {/* Image 1 */}
-      <div className="project-card">
+      <div className="project-card-left">
          <Link to="/nhs-login-project">
-        <img src={MoreProject1} alt="Project 1" className="project-image" />
+        <img src={MoreProject1} alt="Project 1" className="project-image-left" />
         <div className="project-overlay">
           <span className="project-text">Integration of a Third-Party Solution</span>
           <span className="project-arrow">→</span>
@@ -713,12 +771,12 @@ const NHSProject = () => {
       </div>
 
       {/* Image 2 */}
-      <div className="project-card">
-        <Link to="/purpose">
-        <img src={NHSLogo} alt="Project 2" className="project-image" />
+      <div className="project-card-right">
+        <Link to="#">
+        <img src={MoreProject2} alt="Project 2" className="project-image-right" />
         <div className="project-overlay">
-          <span className="project-text">Another Project</span>
-          <span className="project-arrow">→</span>
+          <span className="project-text">COMING SOON!</span>
+          <span className="project-arrow">◆</span>
         </div>
         </Link>
       </div>

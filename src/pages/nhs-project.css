@@ -995,9 +995,13 @@ li:last-child {
 }
 
 .nhs-image-container {
-  display: block; /* make it a block so it occupies vertical space */
-  text-align: center; /* center the images inside */
+  display: flex;
+  align-items: center;
+  gap: 10px;          /* spacing between images */
+  justify-content: center; /* center images if extra space */
+  flex-wrap: nowrap;   /* keep all images in one row */
 }
+ 
 
 .nhs-phone-large {
   height: 40rem;    
@@ -1012,10 +1016,7 @@ li:last-child {
   transform: scale(1.05);
 }
 
-
-.nhs-phone-list {
-  height: 40rem;     
-}
+ 
 
 .nhs-phone-medium {
   width: 12rem;
@@ -1041,7 +1042,7 @@ li:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px; /* Add some padding to accommodate rotation */
+  padding: 50px 0 50px 50px; /* Add some padding to accommodate rotation */
 }
 
 .layered-phones-container {
@@ -1070,6 +1071,7 @@ li:last-child {
   left: -130px; /* Offset to make it "poke out" */
   z-index: 1;
   transform: rotate(-20deg);
+  
 }
 
 /* Hover effects */
@@ -1085,7 +1087,11 @@ li:last-child {
   transform: rotate(0deg) scale(1.05);
 }
 
-
+.nhs-image-container-accessibility img {
+  max-width: 100%;
+  height: 500px;
+  object-fit: contain; 
+}
 
 
 .nhs-accessibility-section {
@@ -1100,40 +1106,43 @@ li:last-child {
   max-width: 34rem;
 }
 
+
+
+
+
+
 .nhs-scroll-container {
-  overflow-x: auto;
+  overflow-x: auto;        /* allow horizontal scroll */
   overflow-y: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  position: relative;
-  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  cursor: grab;            /* shows user it can be dragged (visual only) */
 }
 
-/* Hide scrollbar for WebKit browsers */
-.nhs-scroll-container::-webkit-scrollbar {
-  display: none;
-}
 
 .nhs-scroll-container::-webkit-scrollbar {
-  display: none;
+  
+  
 }
 
 .nhs-scroll-content {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   padding-bottom: 1rem;
-  width: max-content;
+  min-width: 100%;         /* container fits content width */
+  white-space: normal;        /* prevent items from wrapping */
+  
 }
 
 .nhs-phone-scroll {
-  flex-shrink: 0;
-}
+
+  
+} 
 
 
+ 
 
-
-
+ 
 
 
 /* Impact section */
@@ -1152,8 +1161,8 @@ text-align: center;
 }
 
 .impact-subtitle {
-  margin-bottom: 48px;
-  font-size: 4.5rem;
+  margin-bottom: 24px;
+  font-size: 2.5rem;
   color: #fff;
   font-weight: 600;
   letter-spacing: -0.03rem;
@@ -1164,12 +1173,14 @@ text-align: center;
  
 
 .impact-section p {
-  font-size: 1.7rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: white;
   max-width: 800px;
   letter-spacing: -0.03rem;
 }
+ 
+
 
 
 .impact-cards {
@@ -1203,6 +1214,7 @@ text-align: center;
 
 
 .impact-card:nth-child(2):hover {
+  
   transform: translateY(-65px);
 }
 
@@ -1354,24 +1366,56 @@ text-align: center;
   margin-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2rem;
 }
 
-.project-card {
+
+.project-card-left {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   cursor: pointer;
+  background-color: #002D8A;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 400px;           /* ensure container has height */
 }
 
-.project-image {
+
+.project-card-right {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #E2D1BF;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 400px;           /* ensure container has height */
+}
+
+.project-image-left {
   width: 100%;
-  height: 100%;
+  height: 100%; 
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image {
+
+.project-image-right {
+  width: 100%;              /* smaller width */
+  height: 100%;            /* maintain aspect ratio */
+  max-height: 100%;        /* don’t overflow container */
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;          /* ensures flex centering works */
+}
+
+.project-card-left:hover .project-image {
+  transform: scale(1.05);
+}
+.project-card-right:hover .project-image {
   transform: scale(1.05);
 }
 
@@ -1391,7 +1435,11 @@ text-align: center;
   transition: opacity 0.3s ease;
 }
 
-.project-card:hover .project-overlay {
+.project-card-left:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-card-right:hover .project-overlay {
   opacity: 1;
 }
 
@@ -1419,6 +1467,9 @@ text-align: center;
       margin-top: 8rem;
   margin-bottom: 16rem;
   }
+
+
+  
 }
 
 @media (max-width: 768px) {
@@ -1575,6 +1626,203 @@ font-size: 2rem;
   .summary-card {
     max-width: 100%;
   }
+
+   
+  
+.nhs-image-container {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  /* min-height: 100vh;         full viewport height on mobile */
+  /* padding: 40px; */
+}
+
+.nhs-image-container img {
+  height: 40rem;             /* fixed height on desktop */
+  width: auto;               /* maintain aspect ratio */
+  object-fit: contain;       /* don’t crop */
+  max-width: 90%;            /* responsive on mobile */
+}
+
+  .nhs-content2 {
+    order: 1; /* move content above */
+  }
+
+ .layered-phones-wrapper {
+    flex-wrap: nowrap;         /* side by side on desktop */
+    /* padding: 40px;  */
+    min-height: auto;          /* remove full screen height */
+    order: 2; 
+    
+  }
+
+.phone-hover-effect:last-child {
+  left: -60px;       
+  height: auto;
+  width: 300px;      /* Fixed size that matches your design */
+  max-width: 100%;   /* Prevents overflow on very small screens */
+}
+
+  .layered-phones-container {
+     /* height: 40rem;               */
+  display: flex;
+  justify-content: flex-end;  /* push items to the right */
+  align-items: center;        /* keep vertical alignment */
+  width: 65%;                /* take full width so "right" makes sense */
+  max-width: 90%;             /* optional: constrain width on mobile */
+  margin: 0 auto;             /* center the whole container within parent */
+
+}
+ 
+  
+
+.nhs-image-container-accessibility {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 0; /* Prevents flex items from overflowing */
+ 
+}
+
+.nhs-image-container-accessibility img {
+  max-width: 100%;
+  height: 500px;
+  object-fit: contain; 
+  
+}
+
+
+ .nhs-scroll-container {
+  overflow-x: auto;           /* enable horizontal scrolling */
+  overflow-y: hidden;         /* hide vertical scrolling */
+  -ms-overflow-style: none;   /* hide scrollbar on IE/Edge */
+  scrollbar-width: none;      /* hide scrollbar on Firefox */
+  position: relative;
+  scroll-behavior: smooth;    /* smooth scrolling */
+
+ overscroll-behavior: contain
+}
+
+/* .nhs-scroll-container::-webkit-scrollbar {
+  display: none;           
+} */
+ 
+
+.nhs-scroll-content {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  width: max-content;         /* container fits content width */
+  white-space: normal;        /* prevent items from wrapping */
+  
+}
+
+.nhs-phone-scroll {
+  flex-shrink: 0;             /* prevents items from shrinking */
+  
+}
+
+
+
+
+
+
+
+
+
+
+ 
+.impact-intro {
+    margin: 0 auto 120px;
+  }
+ .impact-subtitle {
+    margin-bottom: 36px;
+    font-size: 3.5rem;
+  }
+
+.impact-section p {
+    font-size: 1.4rem;
+  }
+
+
+  .impact-card:nth-child(2) {
+    transform: translateY(0);
+  }
+   
+
+
+.impact-card h2 {
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.impact-card h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.03rem;
+}
+
+.impact-card p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.4;
+  margin-top: 4rem;
+
+
+
+}
+
+
+
+
+
+
+
+.more-project-section {
+    padding: 40px 1rem;
+  }
+
+  .more-project-subtitle {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem;  
+    margin-top: 2rem; 
+  }
+
+  .project-image-left {
+   position: absolute;
+  bottom: 0;      /* aligns the bottom of the image to the container */
+  left: 0;
+  width: 100%;
+  height: auto;   /* maintain aspect ratio */
+  min-height: 70%; /* ensures it covers the container */
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  }
+  
+
+  .project-text {
+    font-size: 1rem;
+  }
+
+  .project-arrow {
+    font-size: 1.25rem;
+  }
+
+  .project-overlay {
+    padding: 0.75rem 1rem;  
+  }
+
 }
 
 

@@ -46,6 +46,40 @@
   border-radius: 1rem; /* rounded-lg */
 }
 
+
+
+
+
+
+.coming-soon-overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.25rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  letter-spacing: -0.01rem;
+}
+
+.coming-soon-card:hover .coming-soon-overlay {
+  opacity: 1;
+}
+
+/* Optional: make the card visually disabled */
+.coming-soon-card {
+  cursor: default;
+  filter: grayscale(0.02) contrast(0.95);
+}
+
+
+
+
 /* Background color variants - I've kept these simple */
 .bg-blue-600 {
   background-color: #2563eb;
@@ -61,6 +95,11 @@
   background-color: #002D8A;
 }
 
+.bg-beige {
+  background-color: #E2D1BF;
+}
+
+
 /* Image preview and placeholder */
 .project-card__image-preview {
   position: absolute;
@@ -73,9 +112,9 @@
   justify-content: center;
   /* padding: 1.5rem;   */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
+  width: 100%; 
   margin: 0 auto; /* Centers the element horizontally */
-    background-size: contain; /* Shows full image, may leave empty space */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -84,6 +123,9 @@
   background-size: 40%; /* Only affects cards with bg-white class */
 }
 
+.bg-blue .project-card__image-preview {
+  background-size: 100%; /* Only affects cards with bg-white class */
+}
 
 
 .project-card__image-preview:hover {

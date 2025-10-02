@@ -27,14 +27,11 @@
   border: none;
   cursor: pointer;
   transition: color 0.3s ease; /* transition-colors */
-  
 }
 
 .back-to-top-btn:hover {
   color: #d1d5db; /* A light gray for hover */
 }
-
- 
 
 
 /* Social links container */
@@ -51,5 +48,23 @@
 }
 
 .social-link:hover {
-  color: #d1d5db; /* A light gray for hover */
+  color: #d1d5db;  
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 640px) { /* Tailwind's sm breakpoint is 640px */
+ 
+  .back-to-top-btn {
+    font-size: 0.8rem; /* smaller text */
+  }
+
+  .social-links-container { 
+    font-size: 0.8rem; /* smaller text */
+  }
+
+  .social-link,
+  .email {
+    font-size: 0.8rem; /* smaller text */
+  }
 }

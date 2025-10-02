@@ -1,14 +1,10 @@
-body {
-  
-}
-
 
 
 .nhs-case-study {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   background-color: #F6F3EC; /* This is the current background color */
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .container {
@@ -18,8 +14,8 @@ body {
 }
 
 /* Hero Section */
-.nhs-hero-section {
-  background: #005EB8;
+.nhs-login-hero-section {
+  background: #004B93;
   color: white;
   position: relative;
   padding-top: 15rem;
@@ -37,7 +33,7 @@ body {
   
 }
 
-.nhs-hero-section h1 {
+.nhs-login-hero-section h1 {
   font-size: 3.5rem;
   font-weight: 600;
   line-height: 1.3;
@@ -48,9 +44,9 @@ body {
 
 }
 
-.nhs-hs-hero-img {
+.nhs-login-hero-img {
 /* align-self: flex-end; */
-  max-width: 600px;
+  max-width: 300px;
   height: auto;
 }
 
@@ -152,14 +148,14 @@ body {
   font-weight: 400;
 }
 
-.top-impact-section ul {
+.success-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
   
 }
 
-.top-impact-section li {
+.success-section li {
   position: relative;
   padding-left: 20px;
   font-size: 1.1rem;
@@ -169,7 +165,7 @@ body {
   font-weight: 400;
 }
 
-.top-impact-section li::before {
+.success-section li::before {
   content: '•';
   color: black;
   font-weight: bold;
@@ -215,7 +211,7 @@ body {
 .problem-content {
 margin-top: 4rem;
   border-radius: 20px;  
-  min-height: 600px;
+  /* min-height: 600px; */
 }
 
 .chip-buttons {
@@ -244,8 +240,7 @@ margin-top: 4rem;
 }
 
 .chip.active {
-  background: #BEEFFD;
-  border-color: #4a90e2;
+  background: #DAD5C8;
   color: black;
 }
 
@@ -269,18 +264,17 @@ margin-top: 4rem;
 }
 
 .problem-card {
-  padding: 30px;
+  padding: 24px;
   border-radius: 15px;
-  text-align: left;
-  transition: all 0.3s ease;
+  text-align: left; 
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;  
+  transition: transform 0.3s ease;
 }
-
+ 
 .problem-card:hover {
   transform: translateY(-5px); 
 }
-
 
 
 .card-number {
@@ -308,21 +302,13 @@ margin-top: 4rem;
 
 /* Business Challenge - Light cards */
 .problem-statement-card { 
-  background-color: #F6F3EC;
+  background: #F6F3EC;
+  color: black;
 }
 
 .three-cards {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-/* 
-.fade-in {
-  animation: fadeIn 0.5s ease-in;
-} */
-/* 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-} */
 
 
 /* User Pain-points - Pink cards */
@@ -367,10 +353,1126 @@ margin-top: 4rem;
 
 
 
+/* discovery section */
+
+.discovery-section {
+  background: #F6F3EC;
+  padding: 80px 0;
+}
+
+.discovery-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+}
+
+.discovery-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+}
+
+
+
+
+.discovery-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.text-content {
+  flex: 0 0 400px;
+}
+
+
+.discovery-intro {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 0;
+}
+
+.card-slider-container {
+  flex: 1;
+  position: relative;
+}
+
+.card-slider {
+  overflow: hidden;
+  border-radius: 12px;
+  width: 100%;
+  padding-right: 24px; /* space for next card peek */
+  /* overflow-x: auto;
+  scroll-snap-type: x mandatory; */
+}
+
+.card-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 16px;
+  --card-width: 65%;
+  --gap: 16px;
+}
+
+.discovery-card {
+  flex: 0 0 65%; /* 85% width allows 15% for peek */
+  padding: 32px;
+  background: white;
+  border-radius: 15px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 12rem;
+}
+
+.discovery-card-header {
+  display: flex;
+  align-items: center; /* center vertically with icon */
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #666;
+}
+
+.discovery-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.03rem;
+}
+
+.card-content {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.card-content li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: black;
+  /* margin-bottom: 16px; */
+  position: relative;
+  padding-left: 12px;
+  font-weight: 500;
+  letter-spacing: -0.02rem;
+}
+
+.card-content li:before {
+  content: '•';
+  color: black;
+  position: absolute;
+  left: 0;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.slider-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid black;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: black; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.05);   /* subtle hover effect */
+}
+
+.slider-btn:active {
+  
+  background: black;               /* fill on click */
+  color: white;  
+
+}
+
+
+.slider-btn:disabled,
+.slider-btn.disabled {
+  border-color: #999;             /* grey border */
+  color: #999;                     /* grey arrow */
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.slider-btn:disabled:hover,
+.slider-btn.disabled:hover {
+  /* Override any hover styles when disabled */
+  background: inherit;
+  transform: none;
+  background: transparent;  
+}
+
+
+
+
+
+
+/* Strategy section */
+
+.the-strategy-section {
+  background: white;
+  padding: 80px 0;
+}
+
+.the-strategy-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+}
+
+
+
+.the-strategy-section-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+  
+}
+
+
+
+
+
+.strategy-content {
+  position: relative;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 40px;
+  
+}
+
+.image-container {
+  width: 89%;
+  height: 250px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative; 
+  margin-top: 3rem;
+  border: 1px solid #DADADA; 
+}
+
+.strategy-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  align-items: flex-start;
+}
+
+.toggle-buttons {
+  /* Remove absolute positioning */
+  /* display: flex; */
+  flex-direction: column;
+  gap: 8px;
+  /* Add some margin to position it nicely next to the image */
+  margin-left: auto; /* This will push it to the left */
+   
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left; 
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  color: #000000;
+  opacity: 1;
+}
+
+.toggle-btn.inactive {
+  color: #999999;
+  opacity: 0.6;
+}
+
+.toggle-btn:hover {
+  opacity: 1;
+}
+ 
+
+
+
+
+
+/* Container for three cards */
+.design-principles.three-principles {
+  display: flex;
+  gap: 80px;
+  align-items: stretch; /* ensures all cards are equal height */
+  margin-top: 6rem;
+}
+
+/* Each card flex */
+.design-principles.three-principles .principle {
+  flex: 1;
+}
+
+/* Specific styling per card if needed */
+.principle.user-journey {
+  background-color: #ffffff; /* default white */
+  /* padding: 16px;  */
+}
+
+.principle.design-principle-1 {
+  background-color: #ffffff; /* default white */
+}
+
+.principle.design-principle-2 {
+  background-color: #ffffff; /* default white */
+}
+
+.principle {
+  flex: 1;
+  
+  display: flex;
+  flex-direction: column; /* ensures header + paragraph stack nicely */
+  justify-content: flex-start;
+  border-left: 1px solid #DADADA; /* 1px solid black on the left */
+  padding-left: 16px; /* small padding so text isn’t touching the border */
+}
+
+
+/* Header layout */
+.principle-header {
+  display: flex;
+  align-items: center; /* vertically center text and number */
+  gap: 8px; /* space between header text and number */
+  margin-bottom: 16px;
+  justify-content: flex-start; /* align everything to the left */
+
+  
+}
+
+
+.principle-header span:first-child {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.principle-number {
+  width: 24px;
+  height: 24px;
+  background-color: #005eb8;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  font-size: 0.8rem;
+}
+
+.principle p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+/* Ideation & Exploration section */
+
+.the-ideation-exploration-section {
+  background: #F6F3EC;
+  padding: 80px 0;
+}
+
+.the-ideation-exploration-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+}
+
+.the-ideation-exploration-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+}
+
+
+
+/* Image Slider Styles */
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    margin: 0 auto 60px;
+    background: #ECE8DE;
+    border-radius: 16px;
+    overflow: hidden; 
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* border-radius: 8px; */
+}
+
+ 
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+}
+
+@media (max-width: 768px) {
+    .image-slider {
+        height: 300px;
+        margin-bottom: 40px;
+    }
+    
+    .slide {
+        padding: 10px;
+    }
+}
+
+
+
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 2rem;
+}
+
+.ideation-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    /* margin-top: 4rem; */
+}
+
+.ideation-card-number {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.3;
+}
+
+.card-description {
+font-size: 16px;
+line-height: 1.6;
+color: #555;
+}
+
+
+
+
+
+
+
+/* Design for Edge Cases section */
+
+.the-edge-cases-section {
+  background: #F6F3EC;
+  padding: 80px 0;
+}
+
+.the-edge-cases-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+}
+
+.the-edge-cases-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+}
+
+/* Registration process image */
+ .registration-process-images{
+    display: block;
+  margin: 0 auto 40px auto; /* center and add spacing below */
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  
+ }
+
+
+.registration-process {
+  border-radius: 16px; 
+}
+
+ .registration-process-images p{
+ font-size: 0.9rem;
+  color: #666; 
+  margin-top: 0.5rem;
+ }
+
+
+/* Edge cases images container */
+.edge-cases-images {
+ display: flex;               /* side by side */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;             /* wrap on smaller screens */
+  width: 100%;
+}
+
+/* Each image + caption wrapper */
+.edge-cases-images > div {
+  flex: 0 0 calc(50% - 10px); /* each takes 50% minus half the gap */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  overflow: hidden;            /* ensures images don’t overflow container */
+}
+
+/* Image styling */
+
+.edge-cases-images img {
+background-color: white;
+ 
+}
+
+.img-left {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.img-right {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+ 
+.edge-cases-images p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+
+
+
+
+
+
+ 
+
+
+/* Prototype section */
+
+.the-prototype-section {
+  background: white;
+  padding: 80px 0;
+}
+
+.the-prototype-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+}
+
+.the-prototype-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+}
+
+ 
+.prototype-video {
+  width: 100%;                  /* full width of parent */
+  max-width: 400px;             /* optional max width */
+  height: auto;                 /* maintain aspect ratio */
+  border-radius: 16px;          /* rounded corners */
+  object-fit: cover;            /* fills container nicely */
+  margin: 4rem auto 60px;       /* centers and adds spacing */
+  background: #3B3B3B;          /* fallback background */
+  position: relative;
+  overflow: hidden;
+  /* padding-top: 2rem;
+  padding-bottom: 2rem; */
+  padding: 4rem;
+}
+
+   
+    
+    
+
+
+
+
+/* Research Summary */
+.key-finding-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-left: 20px;   /* space for the dot */
+  position: relative;
+}
+
+.key-finding-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* vertically center */
+  width: 10px;                 /* dot size */
+  height: 10px;
+  background-color: #2ecc71;   /* green */
+  border-radius: 50%;          /* makes it a circle */
+}
+
+.key-finding-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+    width: 100%;
+}
+ 
+
+.key-finding-card {
+  background: #F6F3EC;
+  border-radius: 12px;
+  padding: 1.5rem; 
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+   color: black;
+}
+
+.key-finding-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.key-finding-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+ 
+
+
+.risk-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-left: 20px;   /* space for the dot */
+  position: relative;
+}
+
+.risk-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* vertically center */
+  width: 10px;                 /* dot size */
+  height: 10px;
+  background-color: #D95A4D;   /* green */
+  border-radius: 50%;          /* makes it a circle */
+}
+
+
+.risk-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.risk-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.risk-card {
+  background: #F6F3EC;
+  border-radius: 12px;
+  padding: 1.5rem; 
+  flex: 1 1 calc(50% - 0.75rem);  /* each card takes half the row */
+  max-width: calc(50% - 0.75rem); /* cap at 50% of row width */
+  color: black;
+  box-sizing: border-box;
+}
+
+
+.risk-card p {
+      font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+/* Implementation section */
+
+.the-implementation-section {
+  background: F6F3EC;
+  padding: 80px 0;
+}
+
+.the-implementation-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+}
+
+.the-implementation-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+}
+
+
+.implementation-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 4rem;
+  margin-top: 4rem; 
+}
+
+/* Card container */
+.implementation-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Image container with background */
+.implementation-img-container {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Base image styles */
+.implementation-card img {
+  display: block;
+  height: auto;
+  
+  max-width: 100%;
+}
+
+/* Individual image widths - adjust these percentages as needed */
+.implementation-img1 {
+   width: 70%;
+    height: auto; 
+}
+
+.implementation-img2 {
+  width: 55%;
+  align-self: flex-end;
+}
+
+.implementation-img3 {
+  width: 33%;
+}
+
+/* Text outside the box */
+.implementation-card-text {
+  text-align: left;
+}
+ 
+.implementation-card-text h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.implementation-card-text p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Bottom row spans full width for single card */
+.bottom-row {
+  grid-template-columns: 1fr;
+  max-width: 50%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .implementation-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .bottom-row {
+    max-width: 100%;
+  }
+}
+
+
+
+
+/* Impact section */
+
+.the-impact-section {
+ background: #3B3B3B; /* light grey like screenshot */
+  text-align: center;
+  padding: 180px 0;
+text-align: center;
+}
+
+.the-impact-intro {
+  max-width: 800px;
+  margin: 0 auto 100px;
+}
+
+.the-impact-subtitle {
+  margin-bottom: 24px;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+  text-align: center; 
+
+}
+
+
+
+.the-impact-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: white;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+}
+ 
+
+
+.the-impact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* responsive */
+}
+
+
+.the-impact-card {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  flex: 1 1 250px;
+  max-width: 360px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+
+.the-impact-card h2 {
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.the-impact-card h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.03rem;
+}
+
+.the-impact-card p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.4;
+  margin-top: 4rem;
+}
+
+
+
+
+/* Learning section */
+
+.the-learning-section {
+  background: #F6F3EC;
+  padding: 80px 0;
+}
+
+.the-learning-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+}
+
+.the-learning-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Future section */
+
+.the-future-section {
+  background: white;
+  padding: 80px 0;
+}
+
+.the-future-section h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+}
+
+.the-future-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: black;
+  max-width: 800px;
+  letter-spacing: -0.03rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+@media (max-width: 1024px) {
+  .implementation-row {
+    gap: 32px;
+  }
+  
+  
+  .implementation-img1 {
+    width: 75%;
+  }
+
+  .implementation-img2 {
+    width: 60%;
+     align-self: flex-end;
+  }
+
+  .implementation-img3 {
+    width: 40%;
+  }
+  
+  .bottom-row {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 991px) {
+  .nhs-hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+  }
+
+  .nhs-hero-section h1 {
+    font-size: 2.5rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .nhs-hs-hero-img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .label {
+    margin-bottom: 8px;
+  }
+}
+
+
+
+
 
 
 
 @media (max-width: 768px) {
+
   .chip-buttons {
     gap: 10px;
   }
@@ -385,7 +1487,256 @@ margin-top: 4rem;
     gap: 20px;
   }
   
-  .problem-content {
+  /* .problem-content {
     padding: 20px;
+  } */
+ 
+    .discovery-section {
+    padding: 60px 0;
+  }
+
+  .discovery-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .text-content {
+    flex: none;
+  }
+
+  .discovery-section h2 {
+    font-size: 2rem;
+  }
+
+  .discovery-intro {
+    font-size: 1rem;
+  }
+
+  .card-slider {
+    overflow: hidden; /* Don't use overflow-x: auto */
+    padding-right: 40px; /* Space for peek */
+  }
+
+  .card-track {
+    gap: 16px;
+    --card-width: calc(100vw - 160px);
+  }
+
+  .discovery-card {
+    flex: 0 0 calc(100vw - 160px);   /* show one card, next card peeks */
+    min-height: 280px;
+    padding: 24px;
+    scroll-snap-align: start;  /* snap each card to left */
+  }
+
+  .card-content li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+
+  .the-strategy-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .image-container {
+    height: 300px;
+  }
+  
+  .toggle-buttons {
+    left: 20px;
+    bottom: 20px;
+  }
+  
+  .toggle-btn {
+    font-size: 1.25rem;
+  }
+  
+  .principles-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .design-principles {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+    .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .design-principles.three-principles {
+  gap: 40px; 
+}
+
+
+
+
+  .edge-cases-images {
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  .edge-cases-images > div {
+    flex: 0 0 100%;           /* full width on mobile */
+  }
+
+
+
+    .prototype-video-container {
+    margin: 2rem auto 40px;   /* smaller spacing on mobile */
+  }
+
+  .prototype-video {
+    width: 100%;              /* full width on mobile */
+    height: auto;             /* maintain aspect ratio */
+  }
+
+
+    .key-finding-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+    .risk-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+   .implementation-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+   
+  /* Larger images on mobile for better visibility */
+  .implementation-img1 {
+    width: 80%;
+  }
+
+  .implementation-img2 {
+    width: 70%;
+     align-self: flex-end;
+  }
+
+  .implementation-img3 {
+    width: 50%;
+  }
+  
+  .implementation-card-text h4 {
+    font-size: 1.2rem;
+  }
+
+  .implementation-card-text p {
+    font-size: 0.95rem;
+  }
+  
+  .bottom-row {
+    max-width: 100%;
+  }
+
+}
+
+
+  
+
+
+
+/* Mobile (<= 600px) */
+@media (max-width: 600px) {
+  .nhs-hero-section {
+    padding-top: 6rem;
+  }
+
+  .nhs-hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .content-column p,
+  .success-section li,
+  .value,
+  .role-value {
+    font-size: 1rem;
+  }
+
+  .arrow-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+ .implementation-row {
+    gap: 32px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+ 
+ 
+.implementation-img-container {
+  padding: 0; /* Remove padding on mobile */
+}
+
+.implementation-img1 {
+  width: 90%;
+  height: auto;
+  display: block;
+}
+
+  .implementation-img2 {
+    width: 65%; /* More uniform sizing on small screens */ 
+    align-self: flex-end;
+  }
+
+
+  .implementation-img3 {
+    width: 35%; /* More uniform sizing on small screens */
+  }
+  
+  .implementation-card-text h4 {
+    font-size: 1.1rem;
+  }
+
+  .implementation-card-text p {
+    font-size: 0.9rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .the-strategy-section {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .the-strategy-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .image-container {
+    height: 250px;
+  }
+  
+  .toggle-buttons {
+    left: 16px;
+    bottom: 16px;
   }
 }
+

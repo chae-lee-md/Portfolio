@@ -78,7 +78,7 @@ const Navbar = () => { // Removed currentPage and setCurrentPage props
                   ABOUT
                 </Link>
                 <Link
-                  to="/archive"
+                  to="#"
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
                   className={`nav-link nav-archive ${location.pathname === '/archive' ? 'nav-link-active' : ''}`}

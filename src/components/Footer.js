@@ -17,10 +17,10 @@ const Footer = () => {
         </button>
 
         <div className="social-links-container">
-          <a href="https://www.linkedin.com/in/chae-lee/" className="social-link">
+          <a href="https://www.linkedin.com/in/chae-lee/" target="_blank" className="social-link">
             LinkedIn
           </a>
-          <a href="#" className="social-link">
+          <a className="email">
             chaehee.lee.d@gmail.com
           </a>
         </div>

@@ -464,7 +464,7 @@ const NHSProject = () => {
         <div class="container">
             <h2>Ecosystem Map & Stakeholder Map</h2>
             <p>
-            Placeholder text for the ecosystem map & stakeholder map description.
+            The Ecosystem Map shows all components of the product and how they interact within the system, while the Stakeholder Map identifies all key people and groups and their relationships to the product, helping to navigate the complexity of a product with many interactions and stakeholders.
             </p>
         <div className="maps-images">
         <img src={EcosystemMap} alt="Ecosystem Map" className="ecosystem-stakeholder-map" 

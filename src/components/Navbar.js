@@ -94,7 +94,7 @@ const Navbar = () => { // Removed currentPage and setCurrentPage props
                   {hovered ? 'WIP!' : 'ARCHIVE'}
                 </Link>
                 {/* Use a regular anchor tag for external links like Resume */}
-                <a href="#" className="nav-link">
+                <a href="https://drive.google.com/file/d/1Jmy2KLYkPSX09W61ffAPqgRrgD5OD5Wx/view?usp=sharing" target="_blank" className="nav-link">
                   RESUME
                 </a>
               </div>

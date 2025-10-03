@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import './Hero.css';
 import profilePic from '../assets/chae-profile.JPG';
 
@@ -32,14 +33,24 @@ const Hero = ({ scrollToProjects }) => {
       </div>
 
       <div className="cta-buttons">
-        <a href="#" className="cta-button">Little bit more about me 
-          
-          
-          <span className="cta-btn-arrow">↗</span></a>
-        <a href="https://www.linkedin.com/in/chae-lee/" target="_blank" rel="noopener noreferrer" className="cta-button">
-        LinkedIn 
-        <span className="cta-btn-arrow">↗</span></a>
+        {/* Internal link using React Router */}
+        <Link to="/about" className="cta-button">
+          Little bit more about me
+          <span className="cta-btn-arrow">↗</span>
+        </Link>
+
+        {/* External link using <a> */}
+        <a
+          href="https://www.linkedin.com/in/chae-lee/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-button"
+        >
+          LinkedIn
+          <span className="cta-btn-arrow">↗</span>
+        </a>
       </div>
+
 
     </div> 
 

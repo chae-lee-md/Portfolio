@@ -26,6 +26,9 @@ import MoreProject2 from "../assets/purpose-preview.png";
 import { Link } from "react-router-dom";
 
 
+import { HashLink } from 'react-router-hash-link';
+
+
 const NHSProject = () => {
   
   useEffect(() => {
@@ -109,12 +112,20 @@ const NHSProject = () => {
                 </ul>
               </div>
 
-             <a href="#solutions-section" className="outcome-button">
+             {/* <a href="#solutions-section" className="outcome-button">
             <div className="arrow-circle">
               <ArrowRight size={20} />
             </div>
             <span>GO TO OUTCOME</span>
-          </a>
+          </a> */}
+
+<HashLink smooth to="#solutions-section" className="outcome-button">
+  <div className="arrow-circle">
+    <ArrowRight size={20} />
+  </div>
+  <span>GO TO OUTCOME</span>
+</HashLink>
+
             </div>
           </div>
         </div>

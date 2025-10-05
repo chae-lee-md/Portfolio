@@ -20,6 +20,8 @@ import MoreProject1 from "../assets/NHS-preview.png";
 import MoreProject2 from "../assets/purpose-preview.png";
 import { Link } from "react-router-dom"; 
 
+import { HashLink } from 'react-router-hash-link';
+
 
 const NHSLoginProject = () => {
   const [activeSection, setActiveSection] = useState('business');
@@ -284,12 +286,21 @@ const prevDiscoverySlide = () => {
                     
               </div>
 
-              <a href="#the-implementation-section" className="outcome-button">
+              {/* <a href="#the-implementation-section" className="outcome-button">
                 <div className="arrow-circle">
                   <ArrowRight size={20} />
                 </div>
                 <span>GO TO OUTCOME</span>
-              </a>
+              </a> */}
+
+<HashLink smooth to="#the-implementation-section" className="outcome-button">
+  <div className="arrow-circle">
+    <ArrowRight size={20} />
+  </div>
+  <span>GO TO OUTCOME</span>
+</HashLink>
+
+
             </div>
           </div>
         </div>
@@ -448,19 +459,19 @@ const prevDiscoverySlide = () => {
 
   <div className="principle design-principle-1">
     <div className="principle-header">
-      <span>Design principle</span>
-      <span className="principle-number">1</span>
+      <span>Seamless Integration</span>
+      {/* <span className="principle-number">1</span> */}
     </div>
-    <p>Defined the optimal point in the flow to introduce authentication, ensuring it felt seamless and contributed to a simpler -not longer- journey.</p>
-  </div>
+    <p>Explored integration approaches with future projects in mind, defined the optimal point to introduce authentication, and ensured consistency across user flows and related products.</p>
+    </div>
   
   <div className="principle design-principle-2">
     <div className="principle-header">
-      <span>Design principle</span>
-      <span className="principle-number">2</span>
+      <span>Early concept validation</span>
+      {/* <span className="principle-number">2</span> */}
     </div>
-    <p>Maintained consistency with existing user flows and aligned patterns across related products.</p>
-  </div>
+    <p>Facilitated regular stakeholder reviews to validate concepts and ensure alignment.</p>
+    </div>
 </div>
 
 
@@ -751,16 +762,17 @@ const prevDiscoverySlide = () => {
                 </div>
 
                 <div className="my-learning-card2">
-                    <h4>Document decisions continuously</h4>
+                    <h4>Clear MVP to focus on and knowing what’s coming next</h4>
                     <p>
-                    Capture key choices as they happen, rather than leaving documentation until the end. This helps the team avoid confusion and maintain clear communication.</p>
-                </div>
+                    We maintained a laser focus on the MVP and its defined scope, which enabled us to build a better - not perfect -product. Having visibility into what was coming next helped me see the bigger picture and design solutions that are scalable for future projects.
+                    </p>
+                    </div>
 
                 <div className="my-learning-card3">
-                    <h4>Build trust through expertise</h4>
+                    <h4>Building Trust Through Consistent Expertise</h4>
                     <p>
-                    Consistently demonstrating your expertise is the fastest way to build trust and earn credibility with senior stakeholders and partners. While speaking their language and understanding their values are important, nothing builds trust more quickly than delivering your work with precision and reliability.</p>
-                     
+                    The fastest way to earn trust and credibility with senior stakeholders is by consistently demonstrating your expertise. Speaking their language and understanding their priorities matter - but delivering your work with precision and reliability builds trust faster than anything else.
+                    </p>
                 </div>
                 </div> 
 

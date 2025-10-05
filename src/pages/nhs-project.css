@@ -709,7 +709,7 @@ li:last-child {
   padding: 1.5rem; 
   flex: 1;
   min-width: 250px;
-  max-width: 300px;
+  /* max-width: 300px; */
    color: black;
 }
 

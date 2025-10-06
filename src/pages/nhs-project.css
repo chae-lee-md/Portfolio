@@ -12,7 +12,8 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 72rem;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -22,7 +23,7 @@ body {
   background: #005EB8;
   color: white;
   position: relative;
-  padding-top: 15rem;
+  padding-top: 80px; /* Clear the nav */
   display: flex;
 /* 
   flex-direction: column; */
@@ -31,10 +32,10 @@ body {
 }
 
 .hero-content {
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 72rem;
   margin: 0 auto;
-  /* padding: 0 20px; */
-  
+  /* padding: 0 20px; */ 
 }
 
 .nhs-hero-section h1 {
@@ -45,6 +46,7 @@ body {
   max-width: 680px;
   letter-spacing: -0.05rem;
   align-self: flex-start;
+  margin-top: 12rem; /* Create the space above H1 */
 
 }
 
@@ -381,8 +383,8 @@ body {
             margin: 0;
             font-size: 0.9rem;
             color: #666;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 72rem;
+            
             
         }
 
@@ -947,8 +949,7 @@ li:last-child {
   min-height: 100vh;
 }
 
-.nhs-max-width {
-  max-width: 80rem;
+.nhs-max-width { 
   margin: 0 auto;
   margin-top: 8rem;
 }
@@ -999,7 +1000,7 @@ li:last-child {
   display: flex;
   align-items: center;
   gap: 10px;          /* spacing between images */
-  justify-content: center; /* center images if extra space */
+  justify-content: left; /* center images if extra space */
   flex-wrap: nowrap;   /* keep all images in one row */
 }
  
@@ -1474,6 +1475,33 @@ text-align: center;
 }
 
 @media (max-width: 768px) {
+  
+  
+  .nhs-hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+    text-align: center;
+  }
+
+  .nhs-hero-section h1 {
+    font-size: 2.5rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;   
+    
+  }
+ 
+   
+
+  .nhs-hs-hero-img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+
+
+  
   .nhs-container {
     padding: 1rem;
   }
@@ -1776,13 +1804,7 @@ font-size: 2rem;
 
 
 
-}
-
-
-
-
-
-
+} 
 
 .more-project-section {
     padding: 40px 1rem;
@@ -1829,8 +1851,10 @@ font-size: 2rem;
 
 
 @media (max-width: 480px) {
-  .nhs-hero-section {
-    padding: 60px 0 80px;
+  .nhs-hero-section { 
+    padding-top: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   
   .nhs-hero-section h1 {

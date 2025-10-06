@@ -217,7 +217,7 @@ const prevDiscoverySlide = () => {
     <div className="nhs-case-study">
       {/* Hero Section */}
       <section className="nhs-login-hero-section">
-        <div className="nhs-logo"></div>
+         
         <div className="hero-content"> 
           <h1>Integration of a Third-Party Solution</h1>
           <img

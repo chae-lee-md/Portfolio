@@ -1,5 +1,4 @@
-
-
+ 
 .nhs-case-study {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   background-color: #F6F3EC; /* This is the current background color */
@@ -8,7 +7,8 @@
 }
 
 .container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 72rem;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -18,7 +18,8 @@
   background: #004B93;
   color: white;
   position: relative;
-  padding-top: 15rem;
+  /* padding-top: 15rem; */
+  padding-top: 80px; /* Clear the nav */
   display: flex;
 /* 
   flex-direction: column; */
@@ -27,7 +28,8 @@
 }
 
 .hero-content {
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 72rem;
   margin: 0 auto;
   /* padding: 0 20px; */
   
@@ -41,7 +43,7 @@
   max-width: 680px;
   letter-spacing: -0.05rem;
   align-self: flex-start;
-
+  margin-top: 12rem; /* Create the space above H1 */
 }
 
 .nhs-login-hero-img {
@@ -358,6 +360,7 @@ margin-top: 4rem;
 .discovery-section {
   background: #F6F3EC;
   padding: 80px 0;
+  overflow-x: hidden; /* Prevent overflow from escaping this section */
 }
 
 .discovery-section h2 {
@@ -400,6 +403,7 @@ margin-top: 4rem;
 .card-slider-container {
   flex: 1;
   position: relative;
+  
 }
 
 .card-slider {
@@ -1176,7 +1180,7 @@ background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 530px;
   overflow: hidden; /* Prevent overflow */
 }
 
@@ -1432,7 +1436,7 @@ text-align: center;
 }
 
 @media (max-width: 991px) {
-  .nhs-hero-section {
+  /* .nhs-hero-section {
     flex-direction: column;
     text-align: center;
     padding-top: 8rem;
@@ -1447,7 +1451,7 @@ text-align: center;
   .nhs-hs-hero-img {
     max-width: 80%;
     margin: 0 auto;
-  }
+  } */
 
   .details-grid {
     grid-template-columns: 1fr;
@@ -1472,6 +1476,11 @@ text-align: center;
 
 @media (max-width: 768px) {
 
+
+  .container {
+    padding: 0 15px; /* Reduce padding */
+  }
+  
   .chip-buttons {
     gap: 10px;
   }
@@ -1513,19 +1522,23 @@ text-align: center;
 
   .card-slider {
     overflow: hidden; /* Don't use overflow-x: auto */
-    padding-right: 40px; /* Space for peek */
+    padding-right: 24px; /* Space for peek */
   }
 
   .card-track {
     gap: 16px;
-    --card-width: calc(100vw - 160px);
+  --card-width: calc(100vw - 80px);
   }
 
   .discovery-card {
-    flex: 0 0 calc(100vw - 160px);   /* show one card, next card peeks */
+ /* flex: 0 0 85%;  */
+ 
+ flex-basis: calc(100vw - 80px);
+ flex-grow: 0;
+ flex-shrink: 0;
     min-height: 280px;
     padding: 24px;
-    scroll-snap-align: start;  /* snap each card to left */
+    scroll-snap-align: start;
   }
 
   .card-content li {
@@ -1646,13 +1659,13 @@ text-align: center;
 
 /* Mobile (<= 600px) */
 @media (max-width: 600px) {
-  .nhs-hero-section {
+  /* .nhs-hero-section {
     padding-top: 6rem;
   }
 
   .nhs-hero-section h1 {
     font-size: 2rem;
-  }
+  } */
 
   .container {
     padding: 0 15px;
@@ -1716,6 +1729,28 @@ text-align: center;
 
 
 @media (max-width: 480px) {
+
+  /* .nhs-login-hero-section { 
+    margin-top: 6rem;  
+  } */
+  
+  .nhs-login-hero-section { 
+    padding-top: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .nhs-login-hero-section h1 {
+    font-size: 1.8rem;
+    margin-top: 2rem;  
+  } 
+
+  .nhs-login-hero-img {
+    max-width: 50%; 
+    margin: 0 auto;
+  }
+
+
   .the-strategy-section {
     padding: 40px 0;
   }

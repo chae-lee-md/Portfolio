@@ -9,7 +9,14 @@ export default function AboutPage() {
       company: "@ NHS Business Services Authorities ",
       period: "2023 - present",
       tags: ["B2B", "Healthcare"],
-      rotation: +1
+      rotation: +2
+    },
+    {
+      title: "Lead Designer",
+      company: "@ GWML",
+      period: "2024 - present",
+      tags: ["AI/ML", "NGO"],
+      rotation: -2
     },
     {
       title: "Product Designer",

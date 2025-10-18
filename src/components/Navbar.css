@@ -128,6 +128,8 @@
   border-radius: 100rem;
   white-space: nowrap;
   z-index: 100;
+
+  
 }
 
 .email-tooltip-arrow {
@@ -286,18 +288,18 @@
     margin-right: 0;
   }
 
-  .email-tooltip {
-    right: 0;
-    left: auto;
-    transform: translateX(25%);
-  }
+.email-tooltip {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 }
 
 @media (max-width: 480px) {
   .navbar-container {
     top: 0.5rem;
     /* left: 0.5rem; */
-    right: 0.5rem;
+    right: 0.75rem;
     /* width: calc(100% - 1rem); */
 
     left: auto;
@@ -307,11 +309,11 @@
     margin-top: 1rem;
   }
 
-   
-   
-
-
   .mobile-menu {
     width: 90%;
+  } 
+
+   .archive-link {
+    display: none;
   }
 }

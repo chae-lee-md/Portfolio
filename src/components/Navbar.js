@@ -15,11 +15,18 @@ const Navbar = () => { // Removed currentPage and setCurrentPage props
     try {
       await navigator.clipboard.writeText('chaehee.lee.d@gmail.com');
       setEmailCopied(true);
-      setTimeout(() => setEmailCopied(false), 2000);
+      setShowTooltip(true);
+      setTimeout(() => {
+      setEmailCopied(false);
+      setShowTooltip(false);
+    }, 2000);
     } catch (err) {
       console.error('Failed to copy email:', err);
     }
   };
+
+  // Detect if device supports hover (desktop)
+  const canHover = window.matchMedia('(hover: hover)').matches;
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -111,6 +118,7 @@ const Navbar = () => { // Removed currentPage and setCurrentPage props
                   <span>CONTACT</span>
                 </button>
 
+
                 {(showTooltip || emailCopied) && (
                   <div className="email-tooltip">
                     {emailCopied ? 'Email copied!' : 'Copy email'}
@@ -189,14 +197,14 @@ const Navbar = () => { // Removed currentPage and setCurrentPage props
         </Link>
         
         <Link
-          to="/archive"
+          to="/"
           onClick={closeMobileMenu}
-          className={`nav-link ${location.pathname === '/archive' ? 'nav-link-active' : ''}`}
+          className={`nav-link archive-link ${location.pathname === '/' ? 'nav-link-active' : ''}`}
         >
           ARCHIVE
         </Link>
 
-        <a href="#" className="nav-link" onClick={closeMobileMenu}>
+        <a href="https://drive.google.com/file/d/1Jmy2KLYkPSX09W61ffAPqgRrgD5OD5Wx/view?usp=sharing" target="_blank" className="nav-link" onClick={closeMobileMenu}>
           RESUME
         </a>
       </div>

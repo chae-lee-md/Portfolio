@@ -181,7 +181,9 @@ body {
     padding-right: 1rem;
     height: auto;
     min-height: 100vh;
+    position: relative;
   }
+
 
   .hero-content {
     flex-direction: column;
@@ -238,11 +240,9 @@ body {
     text-align: center;
   }
 
-  .projects-cta-button {
-    /* position: relative; */
+  .projects-cta-button { 
     margin: 0 auto;
   bottom: 1rem;    /* This pushes it up from the bottom edge of the screen */
-   
   left: 0;
   right: 0;
   margin-left: auto;
@@ -257,6 +257,10 @@ body {
     padding-top: 6rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+
+    min-height: 100vh;
+
+    position: relative;
   }
 
   .greeting-wrapper {
@@ -284,10 +288,8 @@ body {
 
   .projects-cta-button {
     font-size: 0.9rem;
-
-
-    
   }
+  
 }
 
 /* LANDSCAPE MOBILE STYLES */
@@ -303,7 +305,4 @@ body {
     padding-top: 1rem;
   }
 
-  .projects-cta-wrapper {
-    margin-top: 1.5rem;
-  }
 }
